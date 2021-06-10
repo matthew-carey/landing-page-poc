@@ -1,0 +1,118 @@
+body {
+  font-family: Roboto;
+}
+.b-color-d {
+  background-color: #06475a;
+}
+.b-color-a {
+  background-color: #06475a !important;
+}
+.btn-primary:hover {
+  background-color: #06475a !important;
+  border-color: #06475a;
+}
+button.btn.btn-primary.green.mb-5.text-wrap.mt-4:hover {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  color: #fff;
+  border: 3px solid rgba(252, 255, 255, 1.0) !important;
+}
+.color-d {
+  color: #065971 !important;
+}
+.color-a {
+  color: #fff;
+}
+.p-color-d {
+  color: #212121
+}
+.color-h {
+  color: #fff
+}
+.hoot-meeting-table i.far.fa-copy,
+.url-icons i,
+i.far.fa-plus-circle,
+i.fa.fa-trash,
+p.social-ids,
+i {
+  color: #065971;
+}
+.hoot-meeting-table i.far.fa-copy:hover,
+.url-icons i:hover,
+i.far.fa-plus-circle:hover,
+i.fa.fa-trash:hover,
+i:hover {
+  font-weight: bold;
+  animation: pulse 1s linear infinite;
+  -webkit-animation: pulse 1s linear infinite;
+  cursor: pointer;
+  color: #75868c;
+}
+button.btn.btn-primary,
+.hoot-dd .dropdown-item:focus,
+.hoot-dd .dropdown-item:hover {
+  background-color: #065971;
+}
+a:hover {
+  color: #000 !important;
+}
+.hoot-meeting-table i.fas.fa-link:hover {
+  color: #75868c !important;
+  ;
+}
+a {
+  cursor: pointer;
+}
+.color-fff {
+  color: #fff
+}
+.btn btn-primary {
+  background-color: #065971 !important;
+}
+h5.sub-title {
+  color: #000;
+  font-weight: normal;
+}
+.info {
+  color: #939393;
+}
+.col-xs-12.col-sm-7.col-md-6.col-lg-8.mt-5.mt-sm-0.mt-md-0.mt-lg-0 {
+  color: #75868c;
+  font-size: 14px;
+  line-height: 28px;
+}
+.color-d-w {
+  color: #75868c
+}
+div#resources p,
+div#resources li,
+h6,
+p,
+.featureList,
+.featureList ul,
+#resources span {
+  color: #525f7f !important;
+}
+/* Tour Overrides */
+.popover {
+  max-width: 480px;
+}
+.popover-body {
+  padding: 1rem 1.5rem;
+}
+.popover-body p {
+  font-size: 1rem !important;
+}
+.popover h2 {
+  color: #065971;
+  margin-bottom: 1.25rem;
+}
+.popover h2 small {
+  color: #8898aa;
+}
+.popover-header {
+  background-color: #ffffff;
+  border-bottom: 0;
+}
+h3.popover-header {
+  display: none;
+}

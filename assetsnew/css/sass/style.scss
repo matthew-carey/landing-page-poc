@@ -1,0 +1,108 @@
+@import 'variables.scss' ;
+ .btn-primary{
+      background-color:$primary_bgcolor !important;
+
+  }
+  .b-color-a {
+    background-color:$secondary-bgcolor !important;
+  }
+  .btn-primary:hover {
+    background-color: $secondary-bgcolor !important;
+   border-color: $secondary-color;
+  }
+  .color-d {
+    color: $primary_color ;
+  }
+  .color-a {
+    color: $secondary-color;
+  }
+  .p-color-d {
+    color: #525f7f;
+  }
+  .color-h {
+    color: #fff
+  }
+  .hoot-meeting-table i.far.fa-copy,
+  .url-icons i,
+  i.far.fa-plus-circle,
+  i.fa.fa-trash,
+  p.social-ids {
+    color: $primary_color;
+  }
+  .hoot-meeting-table i.far.fa-copy:hover,
+  .url-icons i:hover,
+  i.far.fa-plus-circle:hover,
+  i.fa.fa-trash:hover {
+    font-weight: bold;
+    animation: pulse 1s linear infinite;
+    -webkit-animation: pulse 1s linear infinite;
+    cursor: pointer;
+  }
+  button.btn.btn-primary,
+  .hoot-dd .dropdown-item:focus,
+  .hoot-dd .dropdown-item:hover {
+    background-color: $primary_color;
+  }
+ /*
+  a:hover {
+    color: $secondary-color !important;
+ }
+ */
+ // .hoot-meeting-table i {
+
+    //&.fas.fa-link:hover {
+      //color: $secondary-textcolor !important;
+      
+   // }
+
+ // }
+  a {
+    cursor: pointer;
+  }
+  .color-fff {
+    color: #fff
+  }
+  .btn btn-primary {
+    background-color: #1e90ff !important;
+  }
+  h5.sub-title {
+    color: #32325d;
+    font-weight: bold;
+  }
+  div#resources p,
+  div#resources li,
+  h6,
+  p,
+  .featureList,
+  .featureList ul,
+  #resources span {
+    color: #525f7f !important;
+  }
+  h3.page-title {
+    font-size: 20px;
+    //color: $secondary-color!important;
+  }
+  /* Tour Overrides */
+  .popover {
+    max-width: 480px;
+  }
+  .popover-body {
+    padding: 1rem 1.5rem;
+  }
+  .popover-body p {
+    font-size: 1rem !important;
+  }
+  .popover h2 {
+    color: $primary_color;
+    margin-bottom: 1.25rem;
+  }
+  .popover h2 small {
+    color: #8898aa;
+  }
+  .popover-header {
+    background-color: #ffffff;
+    border-bottom: 0;
+  }
+  h3.popover-header {
+    display: none;
+  }

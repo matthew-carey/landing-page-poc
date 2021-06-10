@@ -1,0 +1,90 @@
+{
+  "results": [{
+    "unknown": {
+      "synopsis": "Berechnet nicht.",
+      "message": "Ich habe immer noch nicht gefunden, was ich suche.",
+      "whatsNext": "Versuchen Sie, eine Abfragezeichenfolge an die URL anzuhängen, um den Inhalt und das Aussehen dieser Site zu ändern. Um eine Abfragezeichenfolge hinzuzufügen, fügen Sie am Ende der URL in der Adressleiste Ihres Browsers ein <code>?</code> hinzu. Fügen Sie dann Parameter und Werte (<code>parameter=wert</code>) wie unten beschrieben hinzu. Verketten Sie mehrere Variablen mit <code>&</code>. Beispiel <code>/index.html?result=failure&color=75868c&brand=w</code><br /><br /><strong>Seiteninhalt:</strong> Verwenden Sie den Parameter <code>result=</code>, um den Inhalt in diesem Teil der Seite zu ändern. Die zulässigen Werte für diesen Parameter sind: <code>success</code>, <code>maybe</code> oder <code>failure</code>.<br /><br /><strong>Primärfarbe: </strong> Verwenden Sie den Parameter <code>color=</code>, um die auf der Seite verwendete Primärfarbe zu ändern. Die zulässigen Werte für diesen Parameter sind 6-stellige hexadezimale Zeichenfolgen (a-f, 0-9) (Beispiel: <code>e20074</code> oder <code>00a880</code>). <em>Hinweise: Fügen Sie nicht die <code>#</code> ein. 3-stellige Hex-Shortcodes funktionieren nicht.</em><br /><br /><strong>Marke:</strong> Verwenden Sie den Parameter <code>brand=</code>, um die Bilder in der Seitenleiste zu ändern. Die zulässigen Werte für diesen Parameter sind: <code>r</code> für Hoot oder <code>w</code> für UMX. <em>Beachten Sie, dass dies derzeit nur die Seitenleiste ändert, nicht alle Erwähnungen von Produktnamen, Links usw.</em><br /><br /><strong>Mehrsprachige Unterstützung:</strong> Die Der Text im Hauptteil der Seite kann in Englisch, Französisch oder Deutsch angezeigt werden, abhängig von der bevorzugten Sprache Ihres Browsers. <a href=\"https://www.computerhope.com/issues/ch001904.htm\" target=\"_blank\" style=\"text-decoration:underline;\">Klicken Sie hier für Anweisungen zum Ändern Ihres bevorzugte Sprache des Browsers.</a> <em>Beachten Sie, dass die Übersetzungen von Google Translate stammen und möglicherweise nicht perfekt sind.</em></a>",
+      "image": "svg/broken.svg",
+      "image-alt": "Unzureichende Daten",
+      "choices": [
+        { 
+          "image": "img/icon_hoot.png", 
+          "heading": "Erleben Sie Hoot",
+          "text": "Holen Sie sich ein Hoot Meetings-Testkonto."
+        }
+      ]
+    },
+    "success": {
+      "synopsis": "Herzliche Glückwünsche!",
+      "message": "Sie haben jetzt Zugriff auf das Video-First-Online-Meeting-Tool der nächsten Generation von Intrado.",
+      "whatsNext": "Sie erhalten in Kürze eine Registrierungs-E-Mail. Schauen Sie sich in der Zwischenzeit um und entdecken Sie alles, was Hoot Meetings zu bieten hat.",
+      "image": "svg/pleasant-surprise.svg",
+      "image-alt": "Erfolgsreaktion",
+      "choices": [
+        { 
+          "image": "img/icon_download.png", 
+          "heading": "Erweitern",
+          "text": "Planen Sie Hoot-Meetings über Outlook oder nehmen Sie mit unseren mobilen Apps unterwegs an Hoot-Meetings teil."
+        },
+        { 
+          "image": "img/icon_learn.png", 
+          "heading": "Lernen",
+          "text": "Im Hoot Learning Center finden Sie Schritt-für-Schritt-Anleitungen, Videoanleitungen und Tutorials für Mobilgeräte."
+        }
+      ]
+    },
+    "maybe": {
+      "synopsis": "Anfrage eingereicht.",
+      "message": "Vielen Dank für Ihr Interesse an Intrados Video-First-Online-Meeting-Tool der nächsten Generation.",
+      "whatsNext": "Ihre Anmeldung wird überprüft. Sie werden bald von uns hören. Schauen Sie sich in der Zwischenzeit um und entdecken Sie alles, was Hoot Meetings zu bieten hat, sowie die anderen großartigen Produkte von Intrado.",
+      "image": "svg/meeting-man.svg",
+      "image-alt": "Positive Reaktion",
+      "choices": [
+        { 
+          "image": "img/icon_download.png", 
+          "heading": "Erweitern",
+          "text": "Planen Sie Hoot-Meetings über Outlook oder nehmen Sie mit unseren mobilen Apps unterwegs an Hoot-Meetings teil."
+        },
+        { 
+          "image": "img/icon_learn.png", 
+          "heading": "Lernen",
+          "text": "Im Hoot Learning Center finden Sie Schritt-für-Schritt-Anleitungen, Videoanleitungen und Tutorials für Mobilgeräte."
+        },
+        { 
+          "image": "img/icon_meetings.png", 
+          "heading": "Cisco Webex",
+          "text": "Eine einfach zu bedienende und sichere App zum Anrufen, Nachrichten und Treffen."
+        },
+        { 
+          "image": "img/icon_collaboration.png", 
+          "heading": "Microsoft Teams",
+          "text": "Zusammenarbeit per Video, Chat, Bildschirmfreigabe und Dateifreigabe."
+        }
+      ]
+    },
+    "failure": {
+      "synopsis": "Wir können Ihre Anfrage nicht erfüllen.",
+      "message": "Vielen Dank für Ihr Interesse an Intrados Video-First-Online-Meeting-Tool der nächsten Generation.",
+      "whatsNext": "Wir können Ihnen leider kein Hoot Meetings-Testkonto zur Verfügung stellen. Als Alternative empfehlen wir die folgenden Produkte von Intrado.",
+      "image": "svg/missed.svg",
+      "image-alt": "Verpasste Reaktion",
+      "choices": [
+        { 
+          "image": "img/icon_meetings.png", 
+          "heading": "Cisco Webex",
+          "text": "Eine einfach zu bedienende und sichere App zum Anrufen, Nachrichten und Treffen."
+        },
+        { 
+          "image": "img/icon_collaboration.png", 
+          "heading": "Microsoft Teams",
+          "text": "Zusammenarbeit per Video, Chat, Bildschirmfreigabe und Dateifreigabe."
+        },
+        { 
+          "image": "img/icon_listen.png", 
+          "heading": "Bedienergestützte Konferenzen",
+          "text": "Einwandfreie Ausführung für Ihre kritischsten Anrufe."
+        }
+      ]
+    }
+  }]
+}

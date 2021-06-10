@@ -1,0 +1,90 @@
+{
+  "results": [{
+    "unknown": {
+      "synopsis": "Does not compute.",
+      "message": "I still haven't found what I'm looking for.",
+      "whatsNext": "Try appending a querystring onto the URL to change the content and look of this site. To add a querystring add a <code>?</code> to the end of the URL in your browser's address bar.  Then add parameters and values (<code>parameter=value</code>) as described below. Chain together multiple variables with <code>&</code>. Example <code>/index.html?result=maybe&color=75868c&secondary=f57f29&brand=w</code><br /><br /><strong>Page content:</strong> Use the parameter <code>result=</code> to change the content in this portion of the page. The acceptable values for this parameter are: <code>success</code>, <code>maybe</code>, or <code>failure</code>.<br /><br /><strong>Primary color:</strong> Use the parameter <code>color=</code> to change the primary color used throughout the page. The acceptable values for this parameter are 6-character hexadecimal (a-f, 0-9) strings (ex. <code>e20074</code> or <code>00a880</code>). <em>Notes: Do not include the <code>#</code>. 3-character hex shortcodes will not work.</em><br /><br /><strong>Secondary color:</strong> Use the parameter <code>secondary=</code> to change the secondary color used throughout the page. The acceptable values for this parameter the same as <code>color=</code> above. <em>Note that the secondary color is currently only shown with <code>result=maybe</code> or <code>result=success</code>.</em><br /><br /><strong>Brand:</strong> Use the parameter <code>brand=</code> to change the images in the sidebar. The acceptable values for this parameter are: <code>r</code> for Hoot or <code>w</code> for UMX. <em>Note that this only changes the sidebar at the moment, not all mentions of product names, links, etc.</em><br /><br /><strong>Multi-language support:</strong> The text in the main portion of the page can be displayed in English, French, or German depending on the preferred langauge set in your browser. <a href=\"https://www.computerhope.com/issues/ch001904.htm\" target=\"_blank\" style=\"text-decoration:underline;\">Click here for instructions on changing your browser's preferred language.</a> <em>Note that the translations are from Google Translate and may not be perfect.</em>",
+      "image": "svg/broken.svg",
+      "image-alt": "Insufficient Data",
+      "choices": [
+        { 
+          "image": "img/icon_hoot.png", 
+          "heading": "Experience Hoot",
+          "text": "Get a Hoot Meetings trial account."
+        }
+      ]
+    },
+    "success": {
+      "synopsis": "Congratulations!",
+      "message": "You now have access to Intrado's next generation, video-first online meeting tool.",
+      "whatsNext": "You will receive a registration email soon. In the meantime, please take a look around and explore all that Hoot Meetings has to offer.",
+      "image": "svg/pleasant-surprise.svg",
+      "image-alt": "Success Reaction",
+      "choices": [
+        { 
+          "image": "svg/icon_download.svg", 
+          "heading": "Extend",
+          "text": "Schedule Hoot Meetings from Outlook or take Hoot Meetings on-the-go with our mobile apps."
+        },
+        { 
+          "image": "svg/icon_learn.svg", 
+          "heading": "Learn",
+          "text": "Find step-by-step instructions, video guides, and tutorials for mobile in the Hoot Learning Center."
+        }
+      ]
+    },
+    "maybe": {
+      "synopsis": "Request submitted.",
+      "message": "Thank you for your interest in Intrado’s next generation, video-first online meeting tool.",
+      "whatsNext": "Your registration is under review. You will hear from us soon. In the meantime, please take a look around and explore all that Hoot Meetings has to offer and in these other great products that Intrado offers.",
+      "image": "svg/meeting-man.svg",
+      "image-alt": "Positive Reaction",
+      "choices": [
+        { 
+          "image": "svg/icon_download.svg", 
+          "heading": "Extend",
+          "text": "Schedule Hoot Meetings from Outlook or take Hoot Meetings on-the-go with our mobile apps."
+        },
+        { 
+          "image": "svg/icon_learn.svg", 
+          "heading": "Learn",
+          "text": "Find step-by-step instructions, video guides, and tutorials for mobile in the Hoot Learning Center."
+        },
+        { 
+          "image": "svg/icon_meetings.svg", 
+          "heading": "Cisco Webex",
+          "text": "One easy-to-use and secure app to call, message and meet."
+        },
+        { 
+          "image": "svg/icon_collaboration.svg", 
+          "heading": "Microsoft Teams",
+          "text": "Collaboration via video, chat, screenshare and file sharing."
+        }
+      ]
+    },
+    "failure": {
+      "synopsis": "We’re unable to fulfill your request.",
+      "message": "Thank you for your interest in Intrado’s next generation, video-first online meeting tool.",
+      "whatsNext": "We unfortunately cannot provide you with a Hoot Meetings trial account. As an alternative, we recommend the following products offered by Intrado.",
+      "image": "svg/missed.svg",
+      "image-alt": "Missed Reaction",
+      "choices": [
+        { 
+          "image": "svg/icon_meetings.svg", 
+          "heading": "Cisco Webex",
+          "text": "One easy-to-use and secure app to call, message and meet."
+        },
+        { 
+          "image": "svg/icon_collaboration.svg", 
+          "heading": "Microsoft Teams",
+          "text": "Collaboration via video, chat, screenshare and file sharing."
+        },
+        { 
+          "image": "svg/icon_listen.svg", 
+          "heading": "Operator Assisted Conferencing",
+          "text": "Flawless execution for your most critical calls."
+        }
+      ]
+    }
+  }]
+}

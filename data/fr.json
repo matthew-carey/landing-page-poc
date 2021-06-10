@@ -1,0 +1,90 @@
+{
+  "results": [{
+    "unknown": {
+      "synopsis": "Ne calcule pas.",
+      "message": "Je n'ai toujours pas trouvé ce que je cherche.",
+      "whatsNext": "Essayez d'ajouter une chaîne de requête à l'URL pour modifier le contenu et l'apparence de ce site. Pour ajouter une chaîne de requête, ajoutez un <code>?</code> à la fin de l'URL dans la barre d'adresse de votre navigateur. Ajoutez ensuite des paramètres et des valeurs (<code>paramètre=valeur</code>) comme décrit ci-dessous. Enchaînez plusieurs variables avec <code>&</code>. Exemple <code>/index.html?result=failure&color=75868c&brand=w</code><br /><br /><strong>Contenu de la page:</strong> Utilisez le paramètre <code>result=</code> pour modifier le contenu de cette partie de la page. Les valeurs acceptables pour ce paramètre sont: <code>success</code>, <code>maybe</code>, ou <code>failure</code>.<br /><br /><strong>Couleur principale : </strong> Utilisez le paramètre <code>color=</code> pour modifier la couleur principale utilisée dans toute la page. Les valeurs acceptables pour ce paramètre sont des chaînes hexadécimales de 6 caractères (a-f, 0-9) (ex. <code>e20074</code> ou <code>00a880</code>). <em>Remarques : N'incluez pas le <code>#</code>. Les shortcodes hexadécimaux à 3 caractères ne fonctionneront pas.</em><br /><br /><strong>Marque :</strong> Utilisez le paramètre <code>brand=</code> pour modifier les images dans la barre latérale. Les valeurs acceptables pour ce paramètre sont : <code>r</code> pour Hoot ou <code>w</code> pour UMX. <em>Notez que cela ne change que la barre latérale pour le moment, pas toutes les mentions de noms de produits, de liens, etc.</em><br /><br /><strong>Support multilingue :</strong> Le le texte dans la partie principale de la page peut être affiché en anglais, français ou allemand selon la langue préférée définie dans votre navigateur. <a href=\"https://www.computerhope.com/issues/ch001904.htm\" target=\"_blank\" style=\"text-decoration:underline;\">Cliquez ici pour obtenir des instructions sur la modification de votre langue préférée du navigateur.</a> <em>Notez que les traductions proviennent de Google Translate et peuvent ne pas être parfaites.</em></a>",
+      "image": "svg/broken.svg",
+      "image-alt": "Données insuffisantes",
+      "choices": [
+        { 
+          "image": "img/icon_hoot.png", 
+          "heading": "Découvrez Hoot",
+          "text": "Obtenez un compte d'essai Hoot Meetings."
+        }
+      ]
+    },
+    "success": {
+      "synopsis": "Toutes nos félicitations!",
+      "message": "Vous avez désormais accès à l'outil de réunion en ligne de nouvelle génération d'Intrado, d'abord vidéo.",
+      "whatsNext": "Vous recevrez bientôt un e-mail d'inscription. En attendant, jetez un coup d'œil autour de vous et explorez tout ce que Hoot Meetings a à offrir.",
+      "image": "svg/pleasant-surprise.svg",
+      "image-alt": "Réaction de réussite",
+      "choices": [
+        { 
+          "image": "img/icon_download.png", 
+          "heading": "Se déployer",
+          "text": "Hoot Meetings depuis Outlook ou participez à Hoot Meetings en déplacement avec nos applications mobiles."
+        },
+        { 
+          "image": "img/icon_learn.png", 
+          "heading": "Apprendre",
+          "text": "Trouvez des instructions détaillées, des guides vidéo et des didacticiels pour mobile dans le centre d'apprentissage Hoot."
+        }
+      ]
+    },
+    "maybe": {
+      "synopsis": "Demande soumise.",
+      "message": "Merci de l'intérêt que vous portez à l'outil de réunion en ligne de nouvelle génération d'Intrado, basé sur la vidéo.",
+      "whatsNext": "Votre inscription est en cours d'examen. Vous aurez bientôt de nos nouvelles. En attendant, jetez un coup d'œil et explorez tout ce que Hoot Meetings a à offrir et ces autres excellents produits qu'Intrado propose.",
+      "image": "svg/meeting-man.svg",
+      "image-alt": "Réaction positive",
+      "choices": [
+        { 
+          "image": "img/icon_download.png", 
+          "heading": "Se déployer",
+          "text": "Hoot Meetings depuis Outlook ou participez à Hoot Meetings en déplacement avec nos applications mobiles."
+        },
+        { 
+          "image": "img/icon_learn.png", 
+          "heading": "Apprendre",
+          "text": "Trouvez des instructions détaillées, des guides vidéo et des didacticiels pour mobile dans le centre d'apprentissage Hoot."
+        },
+        { 
+          "image": "img/icon_meetings.png", 
+          "heading": "Cisco Webex",
+          "text": "Une application facile à utiliser et sécurisée pour appeler, envoyer des messages et se rencontrer."
+        },
+        { 
+          "image": "img/icon_collaboration.png", 
+          "heading": "Microsoft Teams",
+          "text": "Collaboration via vidéo, chat, partage d'écran et partage de fichiers."
+        }
+      ]
+    },
+    "failure": {
+      "synopsis": "Nous ne sommes pas en mesure de répondre à votre demande.",
+      "message": "Merci de l'intérêt que vous portez à l'outil de réunion en ligne de nouvelle génération d'Intrado, basé sur la vidéo.",
+      "whatsNext": "Nous ne pouvons malheureusement pas vous fournir de compte d'essai Hoot Meetings. Comme alternative, nous recommandons les produits suivants proposés par Intrado.",
+      "image": "svg/missed.svg",
+      "image-alt": "Réaction manquée",
+      "choices": [
+        { 
+          "image": "img/icon_meetings.png", 
+          "heading": "Cisco Webex",
+          "text": "Une application facile à utiliser et sécurisée pour appeler, envoyer des messages et se rencontrer."
+        },
+        { 
+          "image": "img/icon_collaboration.png", 
+          "heading": "Microsoft Teams",
+          "text": "Collaboration via vidéo, chat, partage d'écran et partage de fichiers."
+        },
+        { 
+          "image": "img/icon_listen.png", 
+          "heading": "Conférence assistée par l'opérateur",
+          "text": "Exécution sans faille pour vos appels les plus critiques."
+        }
+      ]
+    }
+  }]
+}

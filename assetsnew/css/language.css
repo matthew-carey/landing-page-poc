@@ -1,0 +1,99 @@
+body.fr .retail-box, body.fr-CA .retail-box {
+  width: 400px !important;
+}
+
+body.fr .timing, body.fr-CA .timing {
+  text-align: center;
+}
+body.fr span.chat1, body.fr-CA span.chat1 {
+  padding-right: 10px;
+}
+/*.fr header#header_wholesale .dropdown.float-right.pt-1, .fr-CA header#header_wholesale .dropdown.float-right.pt-1 {
+  margin-top: 14px !important;
+}*/
+table.table.table-th-0 thead th {
+  border-top: 0 !important;
+}
+table.table.table-th-0 th, table.table.table-th-0 td {
+  font-size: 15px !important;
+}
+
+table.table.support-contact.table-th-0 {
+  margin-top: 40px;
+}
+table.table.support-contact.table-th-0 td {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+table.table.support-contact.table-th-0 tr:last-child td {
+  border-bottom: 0 !important;
+}
+.hoot-grid thead.bg-light.text-capitalize th {
+  vertical-align: middle;
+}
+fr .url-icons, fr-CA .url-icons {
+  float: right;
+}
+
+fr .element label.radio-custom-label, fr-CA .element label.radio-custom-label {
+  display: initial;
+}
+.fr footer.wholesale-home, .fr-CA footer.wholesale-home {
+  padding-top: 20px;
+}
+
+
+@media only screen and (max-width: 680px){
+  table.table.table-th-0 th, table.table.table-th-0 td {
+    font-size: 13px !important;
+  }
+}
+@media only screen and (max-width: 574px){
+  /*.fr header#header_wholesale .dropdown.float-right.pt-1, .fr-CA header#header_wholesale .dropdown.float-right.pt-1 {
+    margin-top: 0px !important;
+  }*/
+  .fr footer.wholesale-home {
+    padding-top: 0 !important;
+  }
+  body.fr .retail-box {
+    width: 276px !important;
+  }
+  .fr #confirmEmailID, .fr #forgotPassId , .fr-CA #confirmEmailID, .fr-CA #forgotPassId{
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .fr a#registrationISID, .fr-CA a#registrationISID {
+    display: block;
+  }
+}
+
+
+@media only screen and (max-width: 635px){
+  .retail.fr .footer-menu-home.mt-3 {
+    width: 100%;
+    margin: 0 auto !important;
+    float: left;
+    margin-right: 0 !important;
+    text-align: center;
+  }
+  .retail.fr ul.footer-menu-home li span:first-child {
+    padding-right: 10px !important;
+  }
+  .retail.fr .retail-home .footer-menu-home.mt-3 li {
+    width: auto;
+    text-align: center;
+    display: block !important;
+    clear: both !important;
+    margin: 0 auto !important;
+    float: unset;
+  }
+  .retail.fr ul.footer-menu-home li span {
+    display: inline-block;
+    float: none;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  body.fr .retail-box {
+    width: 276px;
+  }
+}

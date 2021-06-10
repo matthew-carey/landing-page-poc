@@ -1,0 +1,12 @@
+{
+  "results": [{
+    "r": {
+      "logo": "svg/logo.svg",
+      "footer": "img/waves.png"
+    },
+    "w": {
+      "logo": "img/logo-wholesale.png",
+      "footer": "img/angles.png"
+    }
+  }]
+}
