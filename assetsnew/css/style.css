@@ -42,7 +42,7 @@ a.color-d.view-no {
 .btn.btn-primary.disabled.disabled:hover,
 .btn.btn-primary.disabled.disabled {
     box-shadow: none !important;
-    background-color: #582d82 !important;
+    background-color: #582d82;
     cursor: no-drop;
 }
 .btn-start-meeting a,

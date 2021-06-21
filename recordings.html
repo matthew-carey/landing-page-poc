@@ -101,349 +101,7 @@
     <!--<script src="assetsnew/js/bootstrap-session-timeout.js?v=3.0.659" type="text/javascript" ></script>-->
     <script src="connections.js"></script> <!-- This file merely includes one string of where my JSON files are. I'm exlcuding it from this repo. Look for the use of "dataFilesBaseURL" in the checkLangFile() func -->
     <script src="utility.js"></script>
-    <style>
-@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700";
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-    color: #999;
-}
-
-h2{
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 23px;
-  line-height: 24px;
-  color: #3f3d56;
-  letter-spacing: -0.02em;
-}
-
-h3{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 24px;
-  color: #3b3b3b;
-}
-
-a,
-a:hover,
-a:focus {
-    color: inherit;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-.navbar {
-    padding: 15px 10px;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    margin-bottom: 40px;
-    /*box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);*/
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-}
-
-.bg-light{background-color:transparent !important;}
-
-.navbar-btn {
-    box-shadow: none;
-    outline: none !important;
-    border: none;
-}
-
-.line {
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px dashed #ddd;
-    margin: 40px 0;
-}
-
-/* ---------------------------------------------------
-    SIDEBAR STYLE
------------------------------------------------------ */
-
-.wrapper {
-    display: flex;
-    width: 100%;
-}
-
-#sidebar {
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    z-index: 999;
-    background-color: transparent;
-    color: #fff;
-    transition: all 0.3s;
-    overflow-y: scroll;
-}
-
-#sidebarContents{
-  position:relative;
-  padding:0px;
-  overflow-y: scroll;
-}
-
-#menuSection{
-  overflow-y: scroll;
-}
-
-#sidebarFooter{
-  position:fixed;
-  bottom:0;
-  height: 289px;
-  width: 250px;
-  /*background: transparent url("img/waves.png") no-repeat left bottom;*/
-}
-#footerContainer{
-  position: relative;
-  height: 289px;
-  width: 250px;
-}
-
-#copyrightContainer {
-  width:200px;
-  display:block;
-  margin: 166px auto 14px auto;
-}
-#copyrightContainer a{
- font: normal bold 14px "Poppins",sans-serif;
- line-height:28px;
- display:block;
-}
-
-#copyrightContainer p{
- font: normal normal 14px "Poppins",sans-serif;
- color:#656565;
-}
-
-#sidebar.active {
-    margin-left: -250px;
-}
-
-#sidebar .sidebar-header {
-    padding: 20px;
-    background: transparent;
-}
-
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid transparent;
-}
-
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
-}
-
-#sidebar ul li.menuSeparate {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-    margin: 7px 14px;
-    border-radius:4px;
-    border: 2px solid transparent;
-}
-
-#sidebar ul li a:hover {
-    color: #582D82;
-    background: rgba(255,255,255,.9);
-    border: 2px solid rgba(255,255,255,.92);
-}
-
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-    color: #582D82;
-    background: rgba(255,255,255,.9);
-    border: 2px solid rgba(255,255,255,.92);
-}
-
-a[data-toggle="collapse"] {
-    position: relative;
-}
-
-.dropdown-toggle::after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-}
-
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #9B81B4;
-}
-
-ul.CTAs {
-    padding: 20px;
-}
-
-ul.CTAs a {
-    text-align: center;
-    font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-a.download {
-    background: #fff;
-    color: #7386D5;
-}
-
-a.article,
-a.article:hover {
-    background: #6d7fcc !important;
-    color: #fff !important;
-}
-
-/* ---------------------------------------------------
-    CONTENT STYLE
------------------------------------------------------ */
-
-#content {
-    width: calc(100% - 250px);
-    padding: 40px;
-    min-height: 100vh;
-    transition: all 0.3s;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: url("svg/trapezoid.svg") no-repeat right 100px;
-}
-
-#content.active {
-    width: 100%;
-}
-
-/* ---------------------------------------------------
-    MEDIAQUERIES
------------------------------------------------------ */
-
-@media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
-    #content {
-        width: 100%;
-    }
-    #content.active {
-        width: calc(100% - 250px);
-    }
-    #sidebarCollapse span {
-        display: none;
-    }
-}
-@media (max-width: 1200px) {
-    #pictureContainer{
-      display: none;
-    }
-    #content{
-      background-image:none;
-    }
-}
-
-hr {
-  border-top: 1px solid #d9c6ff;
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.recomendations{
-  margin-top:80px;
-}
-
-.recommendations .row{
-  margin-bottom:40px;
-}
-
-.reccomendationBox{
-  margin-bottom: 60px;
-  padding-right: 85px;
-  word-break: break-word;
-}
-.reccomendationBox img{
-  width: auto;
-  max-width: 60px;
-  height: auto;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  object-fit: cover;
-  vertical-align: middle;
-  border-style: none;
-}
-.reccomendationBox h4{
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
-  color: #3B3B3B;
-}
-.reccomendationBox p{
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-  color: #3B3B3B;
-}
-.whatsNext{
-  margin-top:80px;
-}
-.sidebar-header img{
-  display:block; 
-  width:112px; 
-  margin:6px auto;
-}
-
-/*
-.customSVG{
-  visibility:hidden;
-}
-*/
-.primarySVG{
-  width:460px;
-  float:right;
-}
-
-.primaryColorBG{
-  background-color: #fff;
-}
-
-.primaryColorText{
-  color: #fff;
-}
-
-.primaryColorBorder{
-  border-color: #fff;
-}
-</style>
+    <link rel="stylesheet" href="appStyle.css">
     <!-- Google Tag Manager -->
 
     <!-- End Google Tag Manager -->
@@ -474,7 +132,7 @@ hr {
                 </li>
                 <li>
                     <a href="#settingsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-cog"></i> Settings</a>
-                    <ul class="collapse list-unstyled" id="settingsSubmenu">
+                    <ul class="collapse list-unstyled submenu" id="settingsSubmenu">
                         <li>
                             <a href="#">Setting 1</a>
                         </li>
@@ -485,7 +143,7 @@ hr {
                 </li>
                 <li class="menuSeparate">
                     <a href="#adminSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-user-shield"></i> Admin</a>
-                    <ul class="collapse list-unstyled" id="adminSubmenu">
+                    <ul class="collapse list-unstyled submenu" id="adminSubmenu">
                         <li>
                             <a href="#">Admin Page 1</a>
                         </li>
@@ -532,24 +190,278 @@ hr {
                 </div>
             </nav>
             <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7">
-                <!-- Values populated via JSON -->
-                <h2 class="submitSynopsis" id="submitSynopsis"></h2>
-                <h3 class="submitMessage" id="submitMessage"></h3>
-                <p class="whatsNext" id="whatsNext"></p>
-                <div class="recomendations" id="recomendations"></div>
-              </div>
-              <div id="pictureContainer" class="col-xs-12 col-sm-6 col-md-6 col-lg-5"></div>
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <hr />
-                  <h2>Lorem Ipsum Dolor</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <div class="line"></div>
-                  <h2>Lorem Ipsum Dolor</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <div class="line"></div>
-                  <h3>Lorem Ipsum Dolor</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<!-- BEGIN -->
+                    <h2 class="mb-4 page-title">
+                        Recordings
+                    </h2>
+                    <div class="row">               	               
+                        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">
+                            <p>
+                            
+                                Search, playback, download or modify your Hoot™ recordings below. 
+                                Share your recordings by copying a secure link and password, 
+                                then paste the details into an email or chat it to your participants.
+                                
+                            </p>
+                        </div>
+                        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+                        
+                            <!-- <table class="xs-left mt-4 mt-sm-0 float-md-right">
+                                <tbody>
+                                    <tr>
+                                        <td class="text-left first-td">
+                                            <span class="font-weight-bold used-storage"> <span id="totRemId"></span>
+                                                GB</span><br>
+                                            <span class="total-storage font-weight-normal" id="totalStorageId"> of <span id="totGBId"> 5 </span> GB used </span>
+                                        </td>
+                                        <td> <span class="user-info-umx-right  margin-bottom-40">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                        <div class="row-new">
+                                                            <div class="clearfix">
+                                                                <div id="storageDivId">
+                                                                    <span id="storageSpanId"></span>
+                                                                    <div class="slice">
+                                                                        <div class="bar"></div>
+                                                                        <div class="fill"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                        <a class="color-d view-no" id="storageSettings"> Manage Storage <i class="far fa-arrow-right pl-3 color-d"></i>  </a>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table> -->
+                    
+                        </div>
+                    </div>
+                    <div class="mt-4"></div>
+                    <div class="row">
+                       
+                        <div class="col-12">
+                            <label>Filter by Title
+                                <div class="input-group mb-3">
+                                    <input height="40" type="text" onclick="displayFunction()" placeholder="Title" id="textRemover" value="  "class="form-control form-control-md mt-2" height="40">
+                                        <button onclick="deleteFunction()" id="button" class="hidden mt-2">
+                                            <i class="fal fa-times " ></i>
+                                        </button>
+                                </div>
+
+
+                            </label>
+    <!-- recording table -->
+                        <div class="text-right w-100 font-italic pr-3 pb-2" style="font-size: 12px;">All times in PT</div>
+                        <div class="table-responsive-sm">
+                            <table class="table newrecordings">
+                                <thead >
+                                    <tr>
+                                    <th scope="col" class="primaryColorText">Title</th>
+                                    <th scope="col" class="primaryColorText">DATE</th>
+                                    <th scope="col" class="primaryColorText">DURATION</th>
+                                    <th scope="col" class="primaryColorText">SIZE</th>                
+                                    <th scope="col" class="primaryColorText">EXPIRY DATE</th>
+                                    <th scope="col" class="primaryColorText"> <!--<span class="v-none">share</span> 
+                                        <span class="v-none">play</span> <span class="v-none">download</span>-->
+                                    </th>
+                                   
+                                    <th scope="col"></th>
+                                    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td>Recording title</td>
+                                    <td>Nov 10 2021 1:50<span class="units">pm </span> </td>
+                                    <td>1<span class="units">hr </span>  32<span class="units">m </span> </td>
+                                    <td>12.5<span class="units">mb </span> </td>
+                                    <td>
+                                        <span class=" text-warning">
+                                            Jun 1 2021 (0d) 
+                                            <span data-toggle="modal" data-target="#drawer1">
+                                                <i class="fal fa-exclamation-circle ml-2"></i>
+                                            </span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="flex-container">
+                                            <button type="button" class="btn btn-primary table-btn primaryColorBG" data-toggle="modal" data-target="#shareModal">
+                                                <i class="fas fa-share-alt"></i> Share
+                                            </button>
+                                            <button type="button" class="btn btn-primary table-btn primaryColorBG">
+                                                <i class="fas fa-play"></i> Play
+                                            </button>
+                                            <button type="button" class="btn btn-primary table-btn primaryColorBG">
+                                                <i class="fas fa-download"></i> Download
+                                            </button>
+                                        </div>
+                                      
+                                    </td>
+                               
+                                
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn p-0 m-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                                                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#drawer1"><i class="fas fa-cog mr-2"></i> Properties</a>
+                                            <a class="dropdown-item " href="#" data-toggle="modal" data-target="#deleteModal"><i class="far fa-trash-alt mr-2"></i> Delete</a>
+                                            
+                                            </div>
+                                        </div>
+                                    </td>
+                                    
+                                    </tr>
+                                    <tr>
+                                        <td>Recording title</td>
+                                        <td>Nov 10 2021 1:50<span class="units">pm </span> </td>
+                                        <td>1<span class="units">hr </span>  32<span class="units">m </span> </td>
+                                        <td>12.5<span class="units">mb </span> </td>
+                                        <td>
+                                          
+                                                Jul 1 2021 (30d) 
+                                               
+                                        </td>
+                                        <td>
+                                            <div class="flex-container">
+                                                <button type="button" class="btn btn-primary table-btn primaryColorBG">
+                                                    <i class="fas fa-share-alt"></i> Share
+                                                </button>
+                                                <button type="button" class="btn btn-primary table-btn primaryColorBG">
+                                                    <i class="fas fa-play"></i> play
+                                                </button>
+                                                <button type="button" class="btn btn-primary table-btn primaryColorBG">
+                                                    <i class="fas fa-download"></i> Download
+                                                </button>
+                                            </div>
+                                          
+                                        </td>
+                                   
+                                    
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn p-0 m-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                                                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#drawer1"><i class="fas fa-cog mr-2"></i> Properties</a>
+                                                <a class="dropdown-item text-danger" href="#"><i class="far fa-trash-alt mr-2"></i> Delete</a>
+                                                
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                        </tr>
+                               
+                             
+                                
+                                </tbody>
+                            </table>
+                        </div>
+
+                           
+                        </div>
+                        
+                        
+                    </div>
+                    <!-- Button trigger modal -->
+                    <div class="mt-5"></div>
+     
+        <!---
+        <button type="button" class="btn  btn-primary btn-drawer" data-toggle="modal" data-target="#drawer2">
+            Right Side Drawer 2
+        </button>
+        --->
+
+        
+        <!-- Modal 1-->
+        <div class="modal fade drawer right-align pr-0" id="drawer1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Recording Properties</h5>
+            
+                </div>
+                <div class="modal-body">
+                
+                    <label class="w-100">Title
+                        <div class="form-container">
+                            <input type="password" class="form-drawer form-control-sm" placeholder="dflkjgdlfjg" aria-controls="">
+                            <i class="fas fa-check text-success"></i> 
+                        </div>
+                       
+                    </label>
+                   
+                    <label class="w-100 recording-details">Password
+                        <div class="form-container">
+                            <input type="password" class="form-drawer form-control-sm" placeholder="password" aria-controls="">
+                            <i class="fas fa-times text-danger"></i> 
+                        </div>
+                     
+                    
+                    </label>
+                    <span class="font-normal">Minimum length 8-characters and maximum length 30-characters. Spaces are not allowed. Password must contain upper and lower case characters, numbers, and special character:&@$%=!?+-</span>
+                    <div class="clearfix "></div>
+                    
+                    <label class="w-100 recording-details">Expiry Date
+                        <div class="form-container">
+                            <select class="form-drawer form-control-sm" id="datedd">
+                                <option>May 20 2021 (0d)</option>
+                                <option>Jun 20 2021 (30d)</option>
+                                <option>Jul 20 2021 (60d)</option>
+                                <option>Aug 20 2021 (90d)</option>
+                            
+                            </select>
+                            <i class="fal fa-exclamation-circle  text-warning"></i> 
+                        </div>
+                    </label>
+                    <span class="font-normal color-d">Terms & Conditions</span>
+                    <label class="w-100 recording-details">Recording ID
+                        <input type="password" class="form-control form-control-sm style-none" placeholder="87bdfjnsdj974sd" aria-controls="" disabled>
+                        
+                    
+                    </label>
+                    <label class="w-100 recording-details">Duration
+                        <input type="password" class="form-control form-control-sm style-none" placeholder="1hr 32m" aria-controls="" disabled>
+                        
+                    
+                    </label>
+                    <label class="w-100 recording-details">Size
+                        <input type="password" class="form-control form-control-sm style-none" placeholder="44.2mb" aria-controls="" disabled>
+                        
+                    
+                    </label>
+                    <label class="w-100 recording-details">Recording Date
+                        <input type="password" class="form-control form-control-sm style-none" placeholder="Dec 10 2020 1:50pm" aria-controls="" disabled>
+                        
+                    
+                    </label>
+                    <div class="drawer-footer-btn">
+                        <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"  id="myBtn"><i class="fas fa-check-circle mr-2"></i>Update</button>
+        
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+<!-- END -->
               </div>
             </div>
         </div>

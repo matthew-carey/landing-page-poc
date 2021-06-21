@@ -144,6 +144,33 @@
         }
       }
 
+      function LightenDarkenColor(col,amt) {
+        var usePound = false;
+        if ( col[0] == "#" ) {
+            col = col.slice(1);
+            usePound = true;
+        }
+    
+        var num = parseInt(col,16);
+    
+        var r = (num >> 16) + amt;
+    
+        if ( r > 255 ) r = 255;
+        else if  (r < 0) r = 0;
+    
+        var b = ((num >> 8) & 0x00FF) + amt;
+    
+        if ( b > 255 ) b = 255;
+        else if  (b < 0) b = 0;
+    
+        var g = (num & 0x0000FF) + amt;
+    
+        if ( g > 255 ) g = 255;
+        else if  ( g < 0 ) g = 0;
+    
+        return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
+    }
+
       function colorizeCss(useColor="#582D82"){
         // apply background colors
         const bg = document.getElementsByClassName('primaryColorBG');
@@ -156,6 +183,19 @@
         for(let i=0; i<text.length; i++){
           text[i].style.color=useColor;
         }
+
+        const menuLinks = document.querySelectorAll("ul#menuSection li.active a");
+        for(let i=0; i<menuLinks.length; i++){
+          menuLinks[i].style.color=useColor;
+        }
+        /*console.log(document.styleSheets);*/
+        document.styleSheets[6].insertRule('#sidebar ul li a:hover { color: '+useColor+'; }', 6);
+        document.styleSheets[6].insertRule('a[aria-expanded="true"] { color: '+useColor+'; }', 6);
+        
+        const colorNoHash = useColor.split("#").join("");
+        const color40 = LightenDarkenColor(colorNoHash, +40);
+        console.log(color40);
+        document.styleSheets[6].insertRule('ul.submenu a { background-color: #'+color40+'; }', 6);
 
         // apply border colors
         const border = document.getElementsByClassName('primaryColorBorder');

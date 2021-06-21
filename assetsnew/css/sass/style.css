@@ -1,13 +1,13 @@
 .btn-primary {
-  background-color: #582d82 !important;
+  background-color: #582d82;
 }
 
 .b-color-a {
-  background-color: #a2d45e !important;
+  background-color: #a2d45e;
 }
 
 .btn-primary:hover {
-  background-color: #a2d45e !important;
+  background-color: #a2d45e;
   border-color: #fff;
 }
 
