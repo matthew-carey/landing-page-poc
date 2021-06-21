@@ -1,0 +1,31 @@
+{
+  "results": [{
+    "01": {
+      "mediaId": "", // String
+      "ownerNumber": "", // Int
+      "companyNumber": "", // Int
+      "accountNumber": "", // Int
+      "conferenceTime": "", // Long
+      "creationTime": "", // Long
+      "duration": "", // Int
+      "playbackId": "", // String
+      "description": "", // String
+      "onlineTime": "", // Long
+      "offlineTime": "", // Long
+      "mediaAvailabilityStatus": "", // PENDING, ONLINE, OFFLINE, DELETED, PURGING, PURGED
+      "password": "", // String
+      "passwordProtected": "", // Boolean
+      "autoRenewalTime": "", // Long
+      "deletedTime": "", // Long
+      "purgedTime": "", // Long
+      "autoRenewalOption": "", // Int
+      "autoRenewalCancelledTime": "", // Long
+      "hostingDuration": "", // Int
+      "downloadAvailable": "", // Boolean
+      "autoRenewalRemaining": "", // Int
+      "mediaType": "", // RESPLUS_ARCHIVE, CLOUD_VIDEO_ARCHIVE, CLOUD_AUDIO_ARCHIVE
+      "mediaOriginationId": "", // String
+      "size": "" // Long
+    }
+  }]
+}
