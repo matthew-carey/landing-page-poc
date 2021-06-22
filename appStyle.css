@@ -213,7 +213,10 @@ ul.CTAs a {
     position: absolute;
     top: 0;
     right: 0;
-    background: url("svg/trapezoid.svg") no-repeat right 100px;
+}
+
+.sidegraphic{
+  background: url("svg/trapezoid.svg") no-repeat right 100px;
 }
 
 #content.active {
@@ -324,4 +327,33 @@ hr {
 
 .primaryColorBorder{
   border-color: #fff;
+}
+
+.table.newrecordings thead th{
+  border-bottom-color: transparent;
+}
+
+.primaryColorBorderBottom{
+  border-bottom-color: #fff;
+}
+
+.input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child){
+  border-radius:.25em;
+}
+
+.table-btn{
+  flex-basis: 88px;
+  text-transform: capitalize;
+  padding:5px 7px;
+  font-size:12px;
+  margin:3px 12px;
+  align-self:flex-end;
+}
+
+button.btn.btn-primary{
+  border: #fff;
+}
+
+.text-warning i{
+  cursor:pointer;
 }

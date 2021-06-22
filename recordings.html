@@ -39,12 +39,12 @@
     <meta property="og:description" content="">
     <meta property="og:site_name" content="">
     
-     <!-----------Sass File--------------->
+     <!-- Sass File -->
       <link href="assetsnew/css/sass/drawer-css.css" rel="stylesheet" />
       <link href="assetsnew/css/sass/style.css" rel="stylesheet" />
       
 
-    <!------------css Files-------------->
+    <!-- css Files -->
     <!--<link rel="stylesheet" href="assetsnew/css/hoot-header.css?v=3.0.659">-->
     <!--<link rel="stylesheet" href="assetsnew/css/side-menu.css?v=3.0.659">-->
    <!--
@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="assetsnew/css/storage.css?v=3.0.659">
     <link rel="stylesheet" href="assetsnew/css/circle.css?v=3.0.659">
   -->
-    <!----------bs4 css-------->
+    <!-- bs4 css -->
     <!--<link href="assetsnew/css/bs4/bootstrap-datetimepicker.min.css?v=3.0.659" rel="stylesheet" />-->
     <link href="assetsnew/css/bs4/bootstrap.min.css?v=3.0.659" rel="stylesheet" />
     <!--<link href="assetsnew/css/bs4/responsive.dataTables.min.css?v=3.0.659" rel="stylesheet" /> -->  
@@ -253,9 +253,7 @@
                             <label>Filter by Title
                                 <div class="input-group mb-3">
                                     <input height="40" type="text" onclick="displayFunction()" placeholder="Title" id="textRemover" value="  "class="form-control form-control-md mt-2" height="40">
-                                        <button onclick="deleteFunction()" id="button" class="hidden mt-2">
-                                            <i class="fal fa-times " ></i>
-                                        </button>
+                                    <span style="margin-left:-25px;z-index:99;margin-top:15px;color:#828181;"><i class="fas fa-times-circle" ></i></span>
                                 </div>
 
 
@@ -263,19 +261,19 @@
     <!-- recording table -->
                         <div class="text-right w-100 font-italic pr-3 pb-2" style="font-size: 12px;">All times in PT</div>
                         <div class="table-responsive-sm">
-                            <table class="table newrecordings">
-                                <thead >
+                            <table class="table newrecordings primaryColorBorderBottom">
+                                <thead class="primaryColorBorderBottom">
                                     <tr>
-                                    <th scope="col" class="primaryColorText">Title</th>
-                                    <th scope="col" class="primaryColorText">DATE</th>
-                                    <th scope="col" class="primaryColorText">DURATION</th>
-                                    <th scope="col" class="primaryColorText">SIZE</th>                
-                                    <th scope="col" class="primaryColorText">EXPIRY DATE</th>
-                                    <th scope="col" class="primaryColorText"> <!--<span class="v-none">share</span> 
+                                    <th scope="col" class="primaryColorText primaryColorBorderBottom">Title</th>
+                                    <th scope="col" class="primaryColorText primaryColorBorderBottom">DATE</th>
+                                    <th scope="col" class="primaryColorText primaryColorBorderBottom">DURATION</th>
+                                    <th scope="col" class="primaryColorText primaryColorBorderBottom">SIZE</th>                
+                                    <th scope="col" class="primaryColorText primaryColorBorderBottom">EXPIRY DATE</th>
+                                    <th scope="col" class="primaryColorText primaryColorBorderBottom"> <!--<span class="v-none">share</span> 
                                         <span class="v-none">play</span> <span class="v-none">download</span>-->
                                     </th>
                                    
-                                    <th scope="col"></th>
+                                    <th scope="col" class="primaryColorText primaryColorBorderBottom"></th>
                                     
                                     </tr>
                                 </thead>
@@ -286,7 +284,7 @@
                                     <td>1<span class="units">hr </span>  32<span class="units">m </span> </td>
                                     <td>12.5<span class="units">mb </span> </td>
                                     <td>
-                                        <span class=" text-warning">
+                                        <span class="text-warning">
                                             Jun 1 2021 (0d) 
                                             <span data-toggle="modal" data-target="#drawer1">
                                                 <i class="fal fa-exclamation-circle ml-2"></i>
@@ -516,6 +514,7 @@
         }, 1000);
 
         updateLinks();
+        buildSidebar();
     </script>
 </body>
 </html>

@@ -294,7 +294,7 @@ h3.page-title {
 
 .table.newrecordings {
   font-size: 12px !important;
-  border-bottom-color: #582d82 !important;
+  /*border-bottom-color: #582d82 !important;*/
   border-bottom: 1px solid;
   -webkit-box-shadow: 1px 2px 5px #bcb6b6;
           box-shadow: 1px 2px 5px #bcb6b6;
@@ -303,12 +303,12 @@ h3.page-title {
 .table.newrecordings thead {
   background-color: #f5f7fa;
   color: #582d82;
-  border-bottom-color: #582d82 !important;
+  /*border-bottom-color: #582d82 !important;*/
   text-transform: uppercase;
 }
 
 .table.newrecordings thead th {
-  border-bottom-color: #582d82 !important;
+  /*border-bottom-color: #582d82 !important;*/
 }
 
 .table.newrecordings thead th:nth-child(6) {

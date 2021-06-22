@@ -202,6 +202,11 @@
         for(let i=0; i<border.length; i++){
           border[i].style.borderColor=useColor;
         }
+
+        const borderBottom = document.getElementsByClassName('primaryColorBorderBottom');
+        for(let i=0; i<borderBottom.length; i++){
+          borderBottom[i].style.borderBottomColor=useColor;
+        }      
       }
 
       function colorizeCss2(useColor2="#00B5E2"){
