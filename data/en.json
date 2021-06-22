@@ -9,46 +9,46 @@
       "choices": [
         { 
           "image": "img/icon_hoot.png", 
-          "heading": "Experience Hoot",
-          "text": "Get a Hoot Meetings trial account."
+          "heading": "Experience <span class='productName'><\/span>",
+          "text": "Get a <span class='productName'><\/span> trial account."
         }
       ]
     },
     "success": {
       "synopsis": "Congratulations!",
-      "message": "You now have access to Intrado's next generation, video-first online meeting tool.",
-      "whatsNext": "You will receive a registration email soon. In the meantime, please take a look around and explore all that Hoot Meetings has to offer.",
+      "message": "You now have access to <span class='companyName'><\/span>'s next generation, video-first online meeting tool.",
+      "whatsNext": "You will receive a registration email soon. In the meantime, please take a look around and explore all that <span class='productName'><\/span> has to offer.",
       "image": "svg/pleasant-surprise.svg",
       "image-alt": "Success Reaction",
       "choices": [
         { 
           "image": "svg/icon_download.svg", 
           "heading": "Extend",
-          "text": "Schedule Hoot Meetings from Outlook or take Hoot Meetings on-the-go with our mobile apps."
+          "text": "Schedule <span class='productName'><\/span> from Outlook or take <span class='productName'><\/span> on-the-go with our mobile apps."
         },
         { 
           "image": "svg/icon_learn.svg", 
           "heading": "Learn",
-          "text": "Find step-by-step instructions, video guides, and tutorials for mobile in the Hoot Learning Center."
+          "text": "Find step-by-step instructions, video guides, and tutorials for mobile in the <span class='productName'><\/span> Learning Center."
         }
       ]
     },
     "maybe": {
       "synopsis": "Request submitted.",
-      "message": "Thank you for your interest in Intrado’s next generation, video-first online meeting tool.",
-      "whatsNext": "Your registration is under review. You will hear from us soon. In the meantime, please take a look around and explore all that Hoot Meetings has to offer and in these other great products that Intrado offers.",
+      "message": "Thank you for your interest in <span class='companyName'><\/span>’s next generation, video-first online meeting tool.",
+      "whatsNext": "Your registration is under review. You will hear from us soon. In the meantime, please take a look around and explore all that <span class='productName'><\/span> has to offer and in these other great products that <span class='companyName'><\/span> offers.",
       "image": "svg/meeting-man.svg",
       "image-alt": "Positive Reaction",
       "choices": [
         { 
           "image": "svg/icon_download.svg", 
           "heading": "Extend",
-          "text": "Schedule Hoot Meetings from Outlook or take Hoot Meetings on-the-go with our mobile apps."
+          "text": "Schedule <span class='productName'><\/span> from Outlook or take <span class='productName'><\/span> on-the-go with our mobile apps."
         },
         { 
           "image": "svg/icon_learn.svg", 
           "heading": "Learn",
-          "text": "Find step-by-step instructions, video guides, and tutorials for mobile in the Hoot Learning Center."
+          "text": "Find step-by-step instructions, video guides, and tutorials for mobile in the <span class='productName'><\/span> Learning Center."
         },
         { 
           "image": "svg/icon_meetings.svg", 
@@ -65,7 +65,7 @@
     "failure": {
       "synopsis": "We’re unable to fulfill your request.",
       "message": "Thank you for your interest in Intrado’s next generation, video-first online meeting tool.",
-      "whatsNext": "We unfortunately cannot provide you with a Hoot Meetings trial account. As an alternative, we recommend the following products offered by Intrado.",
+      "whatsNext": "We unfortunately cannot provide you with a <span class='productName'><\/span> trial account. As an alternative, we recommend the following products offered by <span class='companyName'><\/span>.",
       "image": "svg/missed.svg",
       "image-alt": "Missed Reaction",
       "choices": [

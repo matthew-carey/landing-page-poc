@@ -231,7 +231,7 @@ h3.page-title {
 }
 
 .modal.drawer .modal-dialog .modal-content .modal-body .drawer-footer-btn button.btn-cancel {
-  border: 1px solid #582d82 !important;
+  border: 1px solid #582d82;
   background-color: #fff;
   margin-right: 10px;
   color: #582d82;

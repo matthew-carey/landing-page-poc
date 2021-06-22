@@ -357,3 +357,11 @@ button.btn.btn-primary{
 .text-warning i{
   cursor:pointer;
 }
+
+.light{
+ /* background-color: transparent; */
+}
+
+.primaryColorBorderLight{
+  /*border-color: transparent;*/
+}

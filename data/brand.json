@@ -2,11 +2,15 @@
   "results": [{
     "r": {
       "logo": "svg/logo.svg",
-      "footer": "img/waves.png"
+      "footer": "img/waves.png",
+      "productName": "Hoot Meetings",
+      "companyName": "Intrado"
     },
     "w": {
       "logo": "img/logo-wholesale.png",
-      "footer": "img/angles.png"
+      "footer": "img/angles.png",
+      "productName": "Unified Meeting X",
+      "companyName": "The Conferencing Center"
     }
   }]
 }
