@@ -194,7 +194,6 @@
         
         const colorNoHash = useColor.split("#").join("");
         const color40 = LightenDarkenColor(colorNoHash, +40);
-        console.log(color40);
         document.styleSheets[6].insertRule('ul.submenu a { background-color: #'+color40+'; }', 6);
 
         // apply border colors
