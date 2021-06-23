@@ -112,7 +112,7 @@
             // Assign attributes to the image and add to DOM
             const newImage = document.createElement('object');
             newImage.id = "svgObject";
-            newImage.className = "customSVG primarySVG";
+            newImage.className = "customSVG primarySVG svgObjects";
             newImage.data = imageURL;
             newImage.type = "image/svg+xml";
             document.getElementById('pictureContainer').appendChild(newImage);
@@ -342,8 +342,12 @@
           else{
             brand = "r";
           }
-
-          if( document.getElementById('logo') ) { document.getElementById('logo').src = data.results[0][brand]['logo']; }
+          if(urlParams.get('logo') && urlParams.get('logo')!=""){
+            document.getElementById('logo').src = "https://"+urlParams.get('logo');
+          }else{
+            if( document.getElementById('logo') ) { document.getElementById('logo').src = data.results[0][brand]['logo']; }
+          }
+          
           if( document.getElementById('footerImg') ) { document.getElementById('footerImg').src = data.results[0][brand]['footer']; }
 
           const productName = document.querySelectorAll(".productName");

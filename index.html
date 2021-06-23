@@ -238,6 +238,15 @@
                   </fieldset>
                 </div>
                 </div>
+                <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                  <label>Logo URL
+                    <div class="input-group mb-3">
+                      <input style="" type="text" placeholder="Logo URL" id="logoURL" value="" class="form-control form-control-md mt-2">
+                    </div>
+                  </label>
+                </div>
+                </div>
 <button type="button" class="btn btn-link" id="btnBrand" onclick="brandSite();"><i class="fas fa-paint-brush"></i> Set Customization Preferences</button>
 <br /><br />
 <script>
@@ -249,6 +258,11 @@ function customizeBrandingForm(){
   const userPrimaryColor = urlParams.get('color');
   const userSecondaryColor = urlParams.get('secondary');
   const userBrand = urlParams.get('brand');
+  const userLogo = urlParams.get('logo');
+
+  if(userLogo){
+    document.getElementById('logoURL').value="https://"+userLogo;
+  }
 
   let usePrimaryColor = defaultPrimaryColor;
   if( queryString && userPrimaryColor && patternHex.test(userPrimaryColor) ){
@@ -293,7 +307,14 @@ function brandSite(){
   const colorPrimary = removePound( document.getElementById('colorPrimary').value );
   const colorSecondary = removePound( document.getElementById('colorSecondary').value );
   const brand = getCheckedValue('brand');
-  window.location.href = "https://siteqa.intrado.com/landing_test/index.html?brand="+brand+"&color="+colorPrimary+"&secondary="+colorSecondary;
+  if(document.getElementById('logoURL').value!=""){
+    let logoUrl = document.getElementById('logoURL').value;
+    logoUrl = logoUrl.replace('https://','');
+    logoUrl = logoUrl.replace('http://','');
+    window.location.href = "https://siteqa.intrado.com/landing_test/index.html?brand="+brand+"&color="+colorPrimary+"&secondary="+colorSecondary+"&logo="+logoUrl;
+  }else{
+    window.location.href = "https://siteqa.intrado.com/landing_test/index.html?brand="+brand+"&color="+colorPrimary+"&secondary="+colorSecondary;
+  }
 }
 </script>
             <!--
