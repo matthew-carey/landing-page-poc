@@ -355,7 +355,7 @@ button.btn.btn-primary{
 }
 
 .text-warning i{
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .light{
@@ -364,4 +364,8 @@ button.btn.btn-primary{
 
 .primaryColorBorderLight{
   /*border-color: transparent;*/
+}
+
+.btnClear{
+  cursor: pointer;
 }

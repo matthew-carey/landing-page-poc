@@ -42,6 +42,44 @@
         return useSource;
       }
 
+      function populateRecordings(key){
+        // load the JSON for use
+        const appText = request.response;
+        const data = JSON.parse(appText);
+        if( data.results[0][key] ){
+        }else{ // If the specified key does not exist, fail...
+          console.log("Oops...");
+        }
+      }
+
+      function clearInput(obj){
+        const parentContainer = obj.closest('div');
+        for(let i=0; i<parentContainer.childNodes.length; i++){
+          const inputs = parentContainer.getElementsByTagName('input');
+          for(let j=0; j<inputs.length; j++){
+            inputs[j].value="";
+          }
+        }
+        obj.style.visibility="hidden"; // hide the clear button       
+      }
+
+      function showClear(obj){
+        const parentContainer = obj.closest('div');
+        if(obj.value!=""){
+          for(let i=0; i<parentContainer.childNodes.length; i++){
+            if(parentContainer.childNodes[i].className=="btnClear"){
+              parentContainer.childNodes[i].style.visibility="visible";
+            }
+          }
+        }else{
+          for(let i=0; i<parentContainer.childNodes.length; i++){
+            if(parentContainer.childNodes[i].className=="btnClear"){
+              parentContainer.childNodes[i].style.visibility="hidden";
+            }
+          } 
+        }
+      }
+
       // Populate the contents onto the card from JSON
       function populateCard(key){
         // load the JSON for use
