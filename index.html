@@ -101,6 +101,7 @@
     <!--<script src="assetsnew/js/bootstrap-session-timeout.js?v=3.0.659" type="text/javascript" ></script>-->
     <script src="connections.js"></script> <!-- This file merely includes one string of where my JSON files are. I'm exlcuding it from this repo. Look for the use of "dataFilesBaseURL" in the checkLangFile() func -->
     <script src="utility.js"></script>
+    <script src="postRendering.js"></script>
     <link rel="stylesheet" href="appStyle.css">
     <!-- Google Tag Manager -->
 
@@ -203,7 +204,7 @@
                 <hr />
 
                 <h2>Customize this site!</h2>
-                <h3>Try changing the 3 items below to match your company's preferences.</h3>
+                <h3>Try changing the 4 items below to match your company's preferences.</h3>
                 <br />
                 <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
@@ -249,74 +250,6 @@
                 </div>
 <button type="button" class="btn btn-link" id="btnBrand" onclick="brandSite();"><i class="fas fa-paint-brush"></i> Set Customization Preferences</button>
 <br /><br />
-<script>
-function customizeBrandingForm(){
-  const patternHex = /[a-fA-F0-9]{6}/gm;
-  const defaultPrimaryColor='582D82';
-  const defaultSecondaryColor='00B5E2';
-  const defaultBrand='r';
-  const userPrimaryColor = urlParams.get('color');
-  const userSecondaryColor = urlParams.get('secondary');
-  const userBrand = urlParams.get('brand');
-  const userLogo = urlParams.get('logo');
-
-  if(userLogo){
-    document.getElementById('logoURL').value="https://"+userLogo;
-  }
-
-  let usePrimaryColor = defaultPrimaryColor;
-  if( queryString && userPrimaryColor && patternHex.test(userPrimaryColor) ){
-    usePrimaryColor = userPrimaryColor;
-  }
-
-  let useSecondaryColor = defaultSecondaryColor;
-  console.log(queryString);
-  console.log(userSecondaryColor);
-  console.log(patternHex.test(userSecondaryColor));
-  if( queryString && userSecondaryColor && patternHex.test(userSecondaryColor) ){
-    console.log('condition met');
-    useSecondaryColor = userSecondaryColor;
-  }
-
-  document.getElementById('colorPrimary').value = "#"+usePrimaryColor;
-  document.getElementById('colorSecondary').value = "#"+useSecondaryColor;
-  if(userBrand=="w"){
-    document.getElementById("brand_w").checked = true;
-  }
-  else{
-    document.getElementById("brand_r").checked = true;
-  }
-}
-
-function getCheckedValue( groupName ) {
-    var radios = document.getElementsByName( groupName );
-    for( i = 0; i < radios.length; i++ ) {
-        if( radios[i].checked ) {
-            return radios[i].value;
-        }
-    }
-    return null;
-}
-
-function removePound(hex){
-  const colorCode = hex.replace('#','');
-  return colorCode;
-}
-
-function brandSite(){
-  const colorPrimary = removePound( document.getElementById('colorPrimary').value );
-  const colorSecondary = removePound( document.getElementById('colorSecondary').value );
-  const brand = getCheckedValue('brand');
-  if(document.getElementById('logoURL').value!=""){
-    let logoUrl = document.getElementById('logoURL').value;
-    logoUrl = logoUrl.replace('https://','');
-    logoUrl = logoUrl.replace('http://','');
-    window.location.href = "https://siteqa.intrado.com/landing_test/index.html?brand="+brand+"&color="+colorPrimary+"&secondary="+colorSecondary+"&logo="+logoUrl;
-  }else{
-    window.location.href = "https://siteqa.intrado.com/landing_test/index.html?brand="+brand+"&color="+colorPrimary+"&secondary="+colorSecondary;
-  }
-}
-</script>
             <!--
                   <h2>Lorem Ipsum Dolor</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -341,6 +274,7 @@ function brandSite(){
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assetsnew/js/jquery-ui.js?v=3.0.659" type="text/javascript"></script>
+    <script src="branding.js"></script>
     <script>
         $(document).ready(function () {
             $("#menuSection, #sidebar, #sidebarContents").mCustomScrollbar({
