@@ -52,6 +52,32 @@
         }
       }
 
+      function hideClear(obj){
+        const parentContainer = obj.closest('div');
+        for(let i=0; i<parentContainer.childNodes.length; i++){
+          if(parentContainer.childNodes[i].className=="btnClear"){
+            parentContainer.childNodes[i].style.visibility="hidden";
+          }
+        }
+      }
+
+      function showClear(obj){
+        const parentContainer = obj.closest('div');
+        for(let i=0; i<parentContainer.childNodes.length; i++){
+          if(parentContainer.childNodes[i].className=="btnClear"){
+            parentContainer.childNodes[i].style.visibility="visible";
+          }
+        }
+      }
+
+      function toggleClear(obj){
+        if(obj.value!=""){
+          showClear(obj);
+        }else{
+          hideClear(obj);
+        }
+      }
+
       function clearInput(obj){
         const parentContainer = obj.closest('div');
         for(let i=0; i<parentContainer.childNodes.length; i++){
@@ -60,29 +86,7 @@
             inputs[j].value="";
           }
         }
-        obj.style.visibility="hidden"; // hide the clear button       
-      }
-
-      function hideClear(obj){
-        const parentContainer = obj.closest('div');
-        for(let i=0; i<parentContainer.childNodes.length; i++){
-          if(parentContainer.childNodes[i].className=="btnClear"){
-            parentContainer.childNodes[i].style.visibility="hidden";
-          }
-        } 
-      }
-
-      function showClear(obj){
-        const parentContainer = obj.closest('div');
-        if(obj.value!=""){
-          for(let i=0; i<parentContainer.childNodes.length; i++){
-            if(parentContainer.childNodes[i].className=="btnClear"){
-              parentContainer.childNodes[i].style.visibility="visible";
-            }
-          }
-        }else{
-          hideClear(obj);
-        }
+        hideClear(parentContainer);    
       }
 
       // Populate the contents onto the card from JSON
