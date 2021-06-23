@@ -63,6 +63,15 @@
         obj.style.visibility="hidden"; // hide the clear button       
       }
 
+      function hideClear(obj){
+        const parentContainer = obj.closest('div');
+        for(let i=0; i<parentContainer.childNodes.length; i++){
+          if(parentContainer.childNodes[i].className=="btnClear"){
+            parentContainer.childNodes[i].style.visibility="hidden";
+          }
+        } 
+      }
+
       function showClear(obj){
         const parentContainer = obj.closest('div');
         if(obj.value!=""){
@@ -72,11 +81,7 @@
             }
           }
         }else{
-          for(let i=0; i<parentContainer.childNodes.length; i++){
-            if(parentContainer.childNodes[i].className=="btnClear"){
-              parentContainer.childNodes[i].style.visibility="hidden";
-            }
-          } 
+          hideClear(obj);
         }
       }
 
