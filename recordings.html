@@ -487,28 +487,25 @@
             });
 
           let useColor = getColorPref();
-          colorizeCss(useColor);
-          colorizeSvg(useColor);
           let useColor2 = getColorPref2();
-          colorizeSvg2(useColor2);
+          colorizeCss(useColor);
+          colorSVG(useColor,useColor2)
           colorizeCss2(useColor2);
         });
 
         window.onload=function(){
           let useColor = getColorPref();
-          colorizeSvg(useColor);
-          colorizeCss(useColor);
           let useColor2 = getColorPref2();
-          colorizeSvg2(useColor2);
+          colorizeCss(useColor);
+          colorSVG(useColor,useColor2)
           colorizeCss2(useColor2);
         }
 
         setTimeout(function(){
           let useColor = getColorPref();
-          colorizeSvg(useColor);
-          colorizeCss(useColor);
           let useColor2 = getColorPref2();
-          colorizeSvg2(useColor2);
+          colorizeCss(useColor);
+          colorSVG(useColor,useColor2)
           colorizeCss2(useColor2);
         }, 1000);
 

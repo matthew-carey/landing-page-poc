@@ -103,8 +103,9 @@
       }
 
       const pSBC=(p,c0,c1,l)=>{
-        //https://github.com/PimpTrizkit/PJs/wiki/12.-Shade,-Blend-and-Convert-a-Web-Color-(pSBC.js)
-        //https://jsfiddle.net/PimpTrizkit/a7ac0qvp/
+        // Documentation at...
+        // https://github.com/PimpTrizkit/PJs/wiki/12.-Shade,-Blend-and-Convert-a-Web-Color-(pSBC.js)
+        // https://jsfiddle.net/PimpTrizkit/a7ac0qvp/
         let r,g,b,P,f,t,h,i=parseInt,m=Math.round,a=typeof(c1)=="string";
         if(typeof(p)!="number"||p<-1||p>1||typeof(c0)!="string"||(c0[0]!='r'&&c0[0]!='#')||(c1&&!a))return null;
         if(!this.pSBCr)this.pSBCr=(d)=>{
@@ -130,90 +131,20 @@
     }
 
       // Colorize SVG based on hex parameter
-function colorSVG(useColor1,useColor2){
-  const objs = document.getElementsByClassName('svgObjects');
-  for(let i=0; i<objs.length; i++){
-    const svgDoc = objs[i].contentDocument;
-    const svgItem = svgDoc.getElementsByClassName('svg-primary-color');
-    const svgItem2 = svgDoc.getElementsByClassName('svg-secondary-color');
-    for(let i=0; i<svgItem.length; i++){
-      svgItem[i].setAttribute('fill',useColor1);
-    }
-    for(let i=0; i<svgItem2.length; i++){
-      svgItem2[i].setAttribute('fill',useColor2);
-    }
-  }
-}
-
-      function colorizeSvg(useColor="#582D82"){
-
-        //let useColor2 = "#00B5E2";
-        let useColor2 = "#ff0000";
-
-        const obj = document.getElementById('svgObject');
-        if(obj!=null){
-        //console.log(obj);
-        const svgDoc = obj.contentDocument;
-        //console.log(svgDoc);
-        const svgItem = svgDoc.getElementsByClassName('svg-primary-color');
-        //console.log(svgItem);
-        for(let i=0; i<svgItem.length; i++){
-          svgItem[i].setAttribute('fill',useColor);
-        }
-
+      function colorSVG(useColor1="#582D82",useColor2="#00B5E2"){
         const objs = document.getElementsByClassName('svgObjects');
         for(let i=0; i<objs.length; i++){
           const svgDoc = objs[i].contentDocument;
-          const svgItem = svgDoc.getElementsByClassName('svg-primary-color');
+          const svgItem1 = svgDoc.getElementsByClassName('svg-primary-color');
           const svgItem2 = svgDoc.getElementsByClassName('svg-secondary-color');
-          for(let i=0; i<svgItem.length; i++){
-            svgItem[i].setAttribute('fill',useColor);
+          for(let i=0; i<svgItem1.length; i++){
+            svgItem1[i].setAttribute('fill',useColor1);
           }
           for(let i=0; i<svgItem2.length; i++){
             svgItem2[i].setAttribute('fill',useColor2);
           }
         }
       }
-        //svgObject.style.visibility="visible";
-      }
-
-      function colorizeSvg2(useColor="#00B5E2"){
-        const objs = document.getElementsByClassName('svgObjects');
-        for(let i=0; i<objs.length; i++){
-          const svgDoc = objs[i].contentDocument;
-          const svgItem2 = svgDoc.getElementsByClassName('svg-secondary-color');
-          for(let i=0; i<svgItem2.length; i++){
-            svgItem2[i].setAttribute('fill',useColor);
-          }
-        }
-      }
-
-      function LightenDarkenColor(col,amt) {
-        var usePound = false;
-        if ( col[0] == "#" ) {
-            col = col.slice(1);
-            usePound = true;
-        }
-    
-        var num = parseInt(col,16);
-    
-        var r = (num >> 16) + amt;
-    
-        if ( r > 255 ) r = 255;
-        else if  (r < 0) r = 0;
-    
-        var b = ((num >> 8) & 0x00FF) + amt;
-    
-        if ( b > 255 ) b = 255;
-        else if  (b < 0) b = 0;
-    
-        var g = (num & 0x0000FF) + amt;
-    
-        if ( g > 255 ) g = 255;
-        else if  ( g < 0 ) g = 0;
-    
-        return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
-    }
 
       function colorizeCss(useColor="#582D82"){
         // apply background colors
@@ -237,7 +168,7 @@ function colorSVG(useColor1,useColor2){
         document.styleSheets[6].insertRule('a[aria-expanded="true"] { color: '+useColor+'; }', 6);
         
         const colorNoHash = useColor.split("#").join("");
-        const color40 = pSBC(.40,'#'+colorNoHash); //LightenDarkenColor(colorNoHash, +40);
+        const color40 = pSBC(.40,'#'+colorNoHash);
         document.styleSheets[6].insertRule('ul.submenu a { background-color: '+color40+'; }', 6);
 
         const colorLight = pSBC(.80,'#'+colorNoHash);
@@ -249,7 +180,6 @@ function colorSVG(useColor1,useColor2){
           border[i].style.borderColor=useColor;
         }
 
-        //const color60 = pSBC(.60,'#'+colorNoHash); //LightenDarkenColor(colorNoHash, +80);
         const lightBorder = document.getElementsByClassName('primaryColorBorderLight');
         for(let i=0; i<lightBorder.length; i++){
           lightBorder[i].style.borderColor=color40;
