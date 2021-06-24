@@ -111,15 +111,23 @@ function returnContrastingColor(hex){
  // Colorize SVG based on hex parameter
 function colorSVG(useColor1="#582D82",useColor2="#00B5E2"){
   const objs = document.getElementsByClassName('svgObjects');
+  const svgPrimary80 = pSBC(.80,useColor1);
+
   for(let i=0; i<objs.length; i++){
     const svgDoc = objs[i].contentDocument;
     const svgItem1 = svgDoc.getElementsByClassName('svg-primary-color');
     const svgItem2 = svgDoc.getElementsByClassName('svg-secondary-color');
+
+    const svgPrimary80Items = svgDoc.getElementsByClassName('svg-primary-color-80');
+
     for(let i=0; i<svgItem1.length; i++){
       svgItem1[i].setAttribute('fill',useColor1);
     }
     for(let i=0; i<svgItem2.length; i++){
       svgItem2[i].setAttribute('fill',useColor2);
+    }
+    for(let i=0; i<svgPrimary80Items.length; i++){
+      svgPrimary80Items[i].setAttribute('fill',svgPrimary80);
     }
   }
 }
@@ -128,33 +136,48 @@ function colorizeCss(useColor="#582D82"){
 
   // get contrasting color
   const contastColor = returnContrastingColor(useColor);
-  console.log(contastColor);
+  const darkColor = "#060606";
 
   // apply background colors
   const bg = document.getElementsByClassName('primaryColorBG');
   for(let i=0; i<bg.length; i++){
     bg[i].style.backgroundColor=useColor;
+    if(contastColor==darkColor){
+      bg[i].style.color=contastColor;
+    }
   }
 
   // apply text colors
   const text = document.getElementsByClassName('primaryColorText');
   for(let i=0; i<text.length; i++){
     text[i].style.color=useColor;
+    if(contastColor==darkColor){
+      text[i].style.color=contastColor;
+    }
   }
 
   const menuLinks = document.querySelectorAll("ul#menuSection li.active a");
   for(let i=0; i<menuLinks.length; i++){
     menuLinks[i].style.color=useColor;
+    if(contastColor==darkColor){
+      menuLinks[i].style.color=contastColor;
+    }
   }
 
   /*console.log(document.styleSheets);*/
-  document.styleSheets[6].insertRule('#sidebar ul li a:hover { color: '+useColor+'; }', 6);
-  document.styleSheets[6].insertRule('a[aria-expanded="true"] { color: '+useColor+'; }', 6);
+  if(contastColor==darkColor){
+    document.styleSheets[6].insertRule('#sidebar ul li a:hover { color: '+contastColor+'; }', 6);
+    document.styleSheets[6].insertRule('a[aria-expanded="true"] { color: '+contastColor+'; }', 6);
+  }else{
+    document.styleSheets[6].insertRule('#sidebar ul li a:hover { color: '+useColor+'; }', 6);
+    document.styleSheets[6].insertRule('a[aria-expanded="true"] { color: '+useColor+'; }', 6);
+  }
   document.styleSheets[6].insertRule('#sidebar { color: '+contastColor+'; }', 6);
   document.styleSheets[6].insertRule('#sidebar ul p { color: '+contastColor+'; }', 6);
 
   const colorNoHash = useColor.split("#").join("");
   const color40 = pSBC(.40,'#'+colorNoHash);
+  const colorNeg40 = pSBC(-.40,'#'+colorNoHash);
   document.styleSheets[6].insertRule('ul.submenu a { background-color: '+color40+'; }', 6);
 
   const colorLight = pSBC(.80,'#'+colorNoHash);
@@ -164,16 +187,25 @@ function colorizeCss(useColor="#582D82"){
   const border = document.getElementsByClassName('primaryColorBorder');
   for(let i=0; i<border.length; i++){
     border[i].style.borderColor=useColor;
+    if(contastColor==darkColor){
+      border[i].style.borderColor=contrastColor;
+    }
   }
 
   const lightBorder = document.getElementsByClassName('primaryColorBorderLight');
   for(let i=0; i<lightBorder.length; i++){
     lightBorder[i].style.borderColor=color40;
+    if(contastColor==darkColor){
+      lightBorder[i].style.borderColor=colorNeg40;
+    }
   }
 
   const borderBottom = document.getElementsByClassName('primaryColorBorderBottom');
   for(let i=0; i<borderBottom.length; i++){
     borderBottom[i].style.borderBottomColor=useColor;
+    if(contastColor==darkColor){
+      borderBottom[i].style.borderBottomColor=contrastColor;
+    }
   }      
 }
 
