@@ -99,6 +99,15 @@ if( data.results[0][key] ){ // If the specified key exists, proceed...
 }
 }
 
+function returnContrastingColor(hex){
+  hex = hex.replace("#", "");
+  var r = parseInt(hex.substr(0,2),16);
+  var g = parseInt(hex.substr(2,2),16);
+  var b = parseInt(hex.substr(4,2),16);
+  var yiq = ((r*299)+(g*587)+(b*114))/1000;
+  return (yiq >= 180) ? '#060606' : '#FEFEFE'; // ? 'black' : 'white'
+}
+
  // Colorize SVG based on hex parameter
 function colorSVG(useColor1="#582D82",useColor2="#00B5E2"){
   const objs = document.getElementsByClassName('svgObjects');
@@ -116,6 +125,11 @@ function colorSVG(useColor1="#582D82",useColor2="#00B5E2"){
 }
 
 function colorizeCss(useColor="#582D82"){
+
+  // get contrasting color
+  const contastColor = returnContrastingColor(useColor);
+  console.log(contastColor);
+
   // apply background colors
   const bg = document.getElementsByClassName('primaryColorBG');
   for(let i=0; i<bg.length; i++){
@@ -132,10 +146,13 @@ function colorizeCss(useColor="#582D82"){
   for(let i=0; i<menuLinks.length; i++){
     menuLinks[i].style.color=useColor;
   }
+
   /*console.log(document.styleSheets);*/
   document.styleSheets[6].insertRule('#sidebar ul li a:hover { color: '+useColor+'; }', 6);
   document.styleSheets[6].insertRule('a[aria-expanded="true"] { color: '+useColor+'; }', 6);
-  
+  document.styleSheets[6].insertRule('#sidebar { color: '+contastColor+'; }', 6);
+  document.styleSheets[6].insertRule('#sidebar ul p { color: '+contastColor+'; }', 6);
+
   const colorNoHash = useColor.split("#").join("");
   const color40 = pSBC(.40,'#'+colorNoHash);
   document.styleSheets[6].insertRule('ul.submenu a { background-color: '+color40+'; }', 6);
