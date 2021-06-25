@@ -9,14 +9,17 @@ npm i
 ````
 
 ## Build Development Files and Launch a Local Preview Server
+
 ````
 npm run-script dev
 ````
 
 ## Build Production Files to deploy to a remote host
+
 ````
 npm run-script prod
 ````
+
 ## Details
 
 This is a project designed to work with the existing implementation of Bootstrap in Hoot Home. It's vanilla JS, HTML and JSON at the moment with the majority of the images as SVG.
