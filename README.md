@@ -53,4 +53,4 @@ By appending a querystring onto the index page URL the user can change the conte
 ## Bugs
 
 - Safari bug for sidebar footer (stays in place when sidebar is collapsed).
-- SVGs do not recolor based on querystring variables on Android.
+- ~~SVGs do not recolor based on querystring variables on Android.~~
