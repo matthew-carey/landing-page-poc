@@ -1,0 +1,66 @@
+// Screen Break Points
+
+// 568 x 320	iPhone 5/SE
+// 640 x 360	Galaxy S5
+// 667 x 375	iPhone 6/7/8
+$atXSmall: 640px;
+
+// 731 x 411	Pixel 2
+// 736 x 414	iPhone 6/7/8 Plus
+$atSmall: 731px;
+
+// 812 x 375	iPhoneX
+// 823 x 411	Pixel 2 XL
+$atMedium: 812px;
+
+// 1024 x 768	iPad
+// 1366 x 1024	iPad Pro
+// 2880 x 1800	MacBook Pro
+$atLarge: 1024px;
+
+// 3360 x 1890	Samsung 32"
+// 4840 x 2160	Samsung 32" MaxRez
+$atXLarge: 3360px;
+
+// COLORS
+    // Primary
+    $colorP1:#582D82; // Indigo
+    $colorP2:#00B5E2; // DeepSkyBlue
+    $colorP3:#8EC853; // YellowGreen
+
+    // Secondary
+    $colorS1:#AFC5CD; // LightSteelBlue
+    $colorS2:#75868C; // Grey 
+    $colorS3:#3A4448; // DimGrey
+    $colorS4:#3DA1AE; // DarkCyan or CadetBlue
+    $colorS5:#00A880; // SeaGreen
+    $colorS6:#F57F29; // Orange
+    $colorS7:#F9C20A; // Gold
+
+    //Gradient Mid-Point
+    $colorGMP:#5BC093; // MediumAquaMarine
+
+    // Misc
+    $colorP1_lighter: #6F4A93;
+    $colorP1_lightest: #a48cba;
+
+// FONTS
+    $font-stack: "Roboto", "roboto", Arial, sans-serif;
+
+// Misc
+    $fat-btn-borders: true; // boolean to switch border-widths on outlined buttons
+
+    $headerHeight: 56px; // used to offset content
+
+/* PULSE */
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.7);
+    }
+    100% {
+      transform: scale(1);
+    }
+}

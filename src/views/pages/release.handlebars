@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+  <head>
+    <title>{{nameApplication}} :: {{title_createRelease}}</title>
+    {{> ../partials/common_head }}
+  </head>
+  <body>
+  {{> ../partials/header }}
+  <div id="mainContent" class="container-fluid py-3">
+    <div class="col-md-11 align-self-center">
+      <h2>{{title_createRelease}}</h2>
+      <div class="row">
+        <div class="col-lg-1">
+          <span class="badge badge__status--{{lowercase badgeText_status.[1]}}" id="releaseNoteStatus">{{badgeText_status.[1]}}</span>
+        </div>
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="form-group col-md-12">
+              <input type="text" placeholder="{{placeholder_title}}" name="title" class="form-control" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <input type="text" placeholder="{{placeholder_releaseVersion}}" name="version" class="form-control" />
+            </div>
+            <div class="form-group col-md-6">
+              <div class="faButton">
+                <input type="date" placeholder="{{placeholder_releaseDate}}" name="date" class="form-control" /><i class="fa fa-calendar-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="form-group">
+            <textarea name="description" placeholder="{{placeholder_releaseDescription}} {{placeholder_optional}}" class="form-control"></textarea>
+          </div>
+        </div>
+        <div class="col-lg-2 text-right">
+          <div class="btn-group d-flex" role="group">
+            <button type="button" class="btn btn-outline-primary w-100 text-left">{{languages.[0]}}</button>
+            <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <div class="dropdown-menu w-100">
+              {{#each languages}}
+              <a class="dropdown-item" href="#">{{this}}</a>
+              {{/each}}
+            </div>
+          </div>
+          <br />
+          <div class="faButton">
+            <button type="button" class="btn btn-outline-primary btn-block text-left btn__addTranslation">{{buttonText_addTranslation}}</button><i class="fa fa-plus-circle"></i>
+          </div> 
+        </div>
+      </div>
+<br /><br />
+  <div class="row">
+    <div class="col-lg-11 text-right">
+      <a href="index.html" class="btn btn-secondary btn--caps">{{buttonText_cancel}}</a>
+      
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary btn--caps">{{buttonText_actions__release.[6]}}</button>
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+        </button>
+        <div class="dropdown-menu">
+          {{#each buttonText_actions__release}}
+          <a class="dropdown-item" href="#">{{this}}</a>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{> ../partials/release_note_test_nav }}
+</div>
+</div>
+  </body>
+</html>

@@ -1,1 +1,6 @@
-connections.js
+/from_non_build/connections.js
+
+# ignore following
+/node_modules
+/dist
+manifesto.json

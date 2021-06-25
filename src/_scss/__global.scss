@@ -1,0 +1,20 @@
+// Load Order = Base, Abstracts, Vendor, Layout, Components, Pages, Themes
+// BASE
+@import "~bootstrap/scss/bootstrap";
+
+// ABSTRACTS
+@import "abstracts/__variables.scss";
+
+// VENDOR
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,500i,700,700i,900&display=swap");
+@import "vendor/fontAwesome/scss/fontawesome.scss";
+@import "vendor/fontAwesome/scss/solid.scss";
+//@import "vendor/dataTables/1_10_22_BS4_min.css";
+//@import "vendor/dataTables/searchPanes/1_2_0_BS4_min.css";
+//@import "vendor/dataTables/select/1_3_1_BS4_min.css";
+@import url("https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css");
+@import url("https://cdn.datatables.net/searchpanes/1.2.0/css/searchPanes.bootstrap4.min.css");
+@import url("https://cdn.datatables.net/select/1.3.1/css/select.bootstrap4.min.css");
+
+// LAYOUT + COMPONENTS + PAGES + THEMES
+@import "_body.scss";

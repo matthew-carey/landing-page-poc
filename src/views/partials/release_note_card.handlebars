@@ -1,0 +1,78 @@
+<div class="row">
+  <div class="card col-md-12 cardItem">
+    <div class="card-body">
+      <form>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12 align-self-center">
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-primary">{{this.applicationDefault}}</button>
+            <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <div class="dropdown-menu">
+              {{#each this.applications}}
+              <a class="dropdown-item" href="#">{{this}}</a>
+              {{/each}}
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-primary">{{setvalues this.type @root.classification_release.[1]}}</button>
+            <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <div class="dropdown-menu">
+              {{#each @root.classification_release}}
+              <a class="dropdown-item" href="#">{{this}}</a>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 align-self-center blockFeaturedChange">
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch{{@index}}"{{#if this.isFeatured}} checked="checked"{{/if}}> <!-- this needs a dynamically-set id attribute (ex. id="customSwitch1")  -->
+                <label class="custom-control-label" for="customSwitch{{@index}}">{{@root.label_featuredChange}}</label><!-- this needs a for attribute set to the same value as above (ex. for="customSwitch1") -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+            <div class="form-group">
+              <textarea name="description" placeholder="{{@root.placeholder_changeDescription}}" class="form-control">{{#if this.description}}{{this.description}}{{/if}}</textarea>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="{{@root.placeholder_title}} {{@root.placeholder_optional}}" name="title" class="form-control"{{#if this.title}} value="{{this.title}}"{{/if}} />
+            </div>
+        </div>
+        <div class="col-md-2">
+          <div class="btn-group d-flex" role="group">
+            <button type="button" class="btn btn-outline-primary w-100 text-left">{{setvalues this.language @root.languages.[0]}}</button>
+            <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <div class="dropdown-menu w-100">
+              {{#each @root.languages}}
+              <a class="dropdown-item" href="#">{{this}}</a>
+              {{/each}}
+            </div>
+          </div>
+          <br />
+          <div class="faButton">
+            <button type="button" class="btn btn-outline-primary btn-block text-left btn__addTranslation">{{@root.buttonText_addTranslation}}</button><i class="fa fa-plus-circle"></i>
+          </div> 
+        </div>
+        <div class="col-md-1 text-right release-note-actions">
+          <button type="button" class="btn btn-block btn-primary btn--caps">{{@root.buttonText_save}}</button>
+          <button type="button" class="btn btn-block btn-secondary btn--caps">{{@root.buttonText_cancel}}</button>
+          <br />
+          <button type="button" class="btn btn-block btn-secondary btn--caps">{{@root.buttonText_delete}}</button>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-lg-1 align-self-center">
+    <span class="badge badge__status--{{lowercase sampleReleaseNote.status}}" id="releaseNoteStatus">{{sampleReleaseNote.status}}</span>
+  </div>
+  <div class="col-lg-10">
+    <h2 id="releaseNoteTitle">{{sampleReleaseNote.title}}</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-2 offset-lg-1 align-self-center"><span id="releaseNoteVersion">{{sampleReleaseNote.version}}</span></div>
+  <div class="col-lg-2 align-self-center"><span id="releaseNoteDate">{{sampleReleaseNote.date}}</span></div>
+  <div class="col-lg-7 text-right">
+    <a href="release.html" class="btn btn-secondary btn--caps">{{buttonText_cancel}}</a>
+    <button type="button" class="btn btn-secondary btn--caps">{{buttonText_edit}}</button>
+    
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary btn--caps">{{sampleReleaseNote.buttonText_default}}</button>
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <div class="dropdown-menu">
+        {{#each buttonText_actions__release}}
+        <a class="dropdown-item" href="#">{{this}}</a>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

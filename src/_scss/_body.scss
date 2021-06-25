@@ -1,0 +1,265 @@
+* {
+  font-family: $font-stack;
+}
+
+#mainContent{
+  margin-top: $headerHeight;
+}
+
+.sticky-top {
+  padding-top: $headerHeight;
+  background-color:#fff;
+}
+
+@media screen and (max-width: 768px) { // Bootstrap's mobile view breakpoint
+  .sticky-top {
+    position: relative !important;
+  }
+}
+
+#releaseNoteInfo{
+  padding-top:18px;
+  padding-bottom:18px;
+}
+
+#appTags{
+  background-color:#dfdfdf;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+#releaseNoteInfo, 
+#appTags {
+  border-bottom:1px solid #ccc;
+}
+
+.btn{
+  font-weight:bold;
+  margin:2px;
+}
+
+.btn--caps{
+  text-transform:uppercase;
+}
+
+.btn-group > .btn:not(:first-child){
+  border-left-width: 0px;
+  margin-left: 0px;
+}
+
+.btn-group > .btn:first-child{
+  border-right-width: 0px;
+  margin-right:0px;
+}
+
+.btn-primary{
+  background-color: $colorP1;
+  border-color: $colorP1;
+  &:hover { background-color: $colorP1_lighter; border-color: $colorP1_lighter; }
+  &:active { background-color: $colorP1_lighter; border-color: $colorP1_lighter; }
+  &:not(:disabled):not(.disabled).active {background-color: $colorP1_lighter; border-color: $colorP1_lighter; }
+  &:not(:disabled):not(.disabled):active {background-color: $colorP1_lighter; border-color: $colorP1_lighter; }
+  .active{ background-color: $colorP1_lighter; border-color: $colorP1_lighter; }
+  .focus{ background-color: $colorP1_lighter; border-color: $colorP1_lighter; }
+}
+
+.show > .btn-primary.dropdown-toggle{
+  background-color: $colorP1_lighter;
+  border-color: $colorP1_lighter;
+}
+
+.btn--whiteFill{
+  background-color:#fff;
+}
+
+.btn-outline-primary{
+  color: $colorP1;
+  border-color: $colorP1;
+  @if $fat-btn-borders{ 
+    border-width:2px;
+  }@else{
+    border-width:1px;
+  }
+  &:hover { background-color: $colorP1_lighter; border-color: $colorP1_lighter; }
+  &:active { background-color: $colorP1_lighter; border-color: $colorP1_lighter; }
+  &:not(:disabled):not(.disabled).active {background-color: $colorP1_lighter; border-color: $colorP1_lighter; }
+  &:not(:disabled):not(.disabled):active {background-color: $colorP1_lighter; border-color: $colorP1_lighter; }
+  .active{ background-color: $colorP1_lighter; border-color: $colorP1_lighter; }
+  .focus{ background-color: $colorP1_lighter; border-color: $colorP1_lighter; }
+}
+
+.show > .btn-outline-primary.dropdown-toggle{
+  background-color: $colorP1_lighter;
+  border-color: $colorP1_lighter;
+}
+
+.custom-control .custom-control-input:checked~.custom-control-label::before{
+  background-color:$colorP1;
+  border:1px solid $colorP1;
+}
+.custom-control .custom-control-input:focus~.custom-control-label::before{
+  //box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(164, 140, 186, 0.25);
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba($colorP1_lightest, 0.25); 
+}
+
+.blockFeaturedChange{
+  padding:24px;
+  text-align:center;
+}
+
+.cardItem{
+  margin-bottom:28px;
+}
+
+.release-note-actions{
+  button {
+    display:block;
+    margin-bottom:12px;
+    font-size:.7em;
+    letter-spacing:.1em;
+  }
+}
+
+// Styling for this is currently handled by https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css
+// //cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css could also be used
+//.sorting::before{
+//  font-family: "Font Awesome 5 Free";
+//  font-weight: 900;
+//  content: "\f0dc";
+//  padding-right:6px;
+//}
+
+.faButton{
+  position:relative;
+  i {
+    position:absolute;
+    color:$colorP1;
+    top:12px;
+    right:10px;
+    cursor:pointer;
+  }
+  .btn:hover ~ i{ // <i> element immediately following a hovered .btn element
+    color:#fff;
+  }
+}
+
+%badge-shared{
+  color:#fff;
+}
+.badge{
+  @extend %badge-shared;
+  &__app{ background-color:$colorP1; }
+  &__filterChoices { cursor: pointer; }
+  &__status{
+    &--archived{ background-color:$colorS3; }
+    &--unpublished{ background-color:$colorS4; }
+    &--published{ background-color:$colorS5; }
+  }
+}
+
+//.badge__app{ @extend %badge-shared; background-color:$colorP1; }
+//.badge__status--unpublished{ @extend %badge-shared;background-color:$colorS4; }
+//.badge__status--published{ @extend %badge-shared;background-color:$colorS5; }
+//.badge__status--archived{ @extend %badge-shared;background-color:$colorS3; }
+//.badge__filterChoices{ cursor: pointer; }
+
+.table th.th--noTopBorder{ border-top-width:0px; } // yuck...BS chained selector combined with BEM
+
+.a__filter{
+  color:$colorP1_lightest;
+  &:hover{
+    color:$colorP1_lighter;
+    cursor:pointer;
+  }
+  i{
+    font-size:80%;
+  }
+  i:hover{
+    animation: pulse 1s linear infinite;
+    font-weight: bold;
+  }
+}
+
+.card{
+  box-shadow:none;
+  //transition: opacity .2s linear;
+  transition: .5s linear all;
+}
+
+.cardGlow{
+  box-shadow: 0 0 1px 3px rgba($colorP3, 0.60);
+  transition: none;
+}
+
+table.dataTable > thead .sorting::after, 
+table.dataTable > thead .sorting_asc::after, 
+table.dataTable > thead .sorting_desc::after, 
+table.dataTable > thead .sorting_asc_disabled::after, 
+table.dataTable > thead .sorting_desc_disabled::after {
+  left: 1em;
+  content: "\2193";
+  color:$colorP1_lightest;
+}
+
+table.dataTable > thead .sorting::before, 
+table.dataTable > thead .sorting_asc::before, 
+table.dataTable > thead .sorting_desc::before, 
+table.dataTable > thead .sorting_asc_disabled::before, 
+table.dataTable > thead .sorting_desc_disabled::before {
+  left: .5em;
+  content: "\2191";
+  color:$colorP1_lightest;
+}
+
+.bumpR{
+  padding-left:18px;
+}
+
+.icon__clearFilter{
+  font-size:.9em;
+  i:nth-child(1){
+    font-size:.9em;
+    ///color:$colorP1_lightest;
+    color:#fff;
+  }
+  i:nth-child(2){
+    color:#dc3545;
+    font-weight:normal;
+  }
+}
+
+.tablebody--scroll{
+  tbody{
+    display:block;
+    height:150px;
+    max-height:150px;
+    overflow:auto;
+  }
+  thead, tbody tr{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  @media screen and (max-width: 768px) { // Bootstrap's mobile view breakpoint
+    tbody{
+      display: inherit;
+      height: inherit;
+      max-height:inherit;
+      overflow: visible;
+    }
+    thead, tbody tr{
+      display: inherit;
+      width: inherit;
+      table-layout: inherit;
+    }
+  }
+}
+
+.row--lightBorderTop{
+  border-top:1px solid #dfdfdf;
+  padding-top:4px;
+}
+
+.dropdown-menu.show{
+  z-index:100;
+}
