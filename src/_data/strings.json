@@ -1,5 +1,31 @@
 {
-  "nameApplication": "My Awesome App",
+  "nameApplication": "Branding POC",
+  "navigationItems": [
+    {
+      "text": "Meetings",
+      "id": "uHome",
+      "url": "index.html",
+      "icon": "far fa-user"
+    },
+    {
+      "text": "Email Sample",
+      "id": "uEmail",
+      "url": "email.html",
+      "icon": "far fa-envelope-open"
+    },
+    {
+      "text": "Recordings",
+      "id": "uRecordings",
+      "url": "recordings.html",
+      "icon": "far fa-play-circle"
+    },
+    {
+      "text": "Reports",
+      "id": "uReports",
+      "url": "#",
+      "icon": "fas fa-chart-pie"
+    }
+  ],
   "languages": ["English","French","Spanish"],
   "classification_release": ["New","Enhancement","Fix"],
   "label_featuredChange": "Featured Change",
