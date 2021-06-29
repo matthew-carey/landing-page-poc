@@ -23,12 +23,12 @@ By appending a querystring onto the index page URL the user can change the conte
 - Better breakpoints for smaller screens. This has not been optimized for mobile or tablet.
 - Better handling of sidebar overflow/scroll on smaller screens.
 - Build process utilizing SCSS, code minification, and actual templating.
-- More content for sidebar nav to get to. In reality this would most likely be implemented with React, but that plus routing are outside the scope of this current POC.
-- Address styling for things like `#sidebar ul li.active>a, a[aria-expanded="true"]`
-- Better application of SVG and CSS re-coloring (multiple functions could be refactored and combined, )
-- Investigate solution akin to SCSS lighten with plain CSS (as I don't have an build process with SCSS at the moment). [CSS filter looks promising](https://css-tricks.com/almanac/properties/f/filter/).
+- ~~More content for sidebar nav to get to. In reality this would most likely be implemented with React, but that plus routing are outside the scope of this current POC.~~
+- ~~Address styling for things like `#sidebar ul li.active>a, a[aria-expanded="true"]`~~
+- ~~Better application of SVG and CSS re-coloring (multiple functions could be refactored and combined, )~~
+- ~~Investigate solution akin to SCSS lighten with plain CSS (as I don't have an build process with SCSS at the moment). [CSS filter looks promising](https://css-tricks.com/almanac/properties/f/filter/).~~
 
 ## Bugs
 
 - Safari bug for sidebar footer (stays in place when sidebar is collapsed).
-- SVGs do not recolor based on querystring variables on Android.
+- ~~SVGs do not recolor based on querystring variables on Android.~~
