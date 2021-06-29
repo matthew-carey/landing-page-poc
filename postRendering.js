@@ -168,9 +168,11 @@ function colorizeCss(useColor="#582D82"){
   if(contastColor==darkColor){
     document.styleSheets[6].insertRule('#sidebar ul li a:hover { color: '+contastColor+'; }', 6);
     document.styleSheets[6].insertRule('a[aria-expanded="true"] { color: '+contastColor+'; }', 6);
+    document.styleSheets[6].insertRule('.table.newrecordings .dropdown-menu.show { border-color: '+contastColor+'; }', 6);
   }else{
     document.styleSheets[6].insertRule('#sidebar ul li a:hover { color: '+useColor+'; }', 6);
     document.styleSheets[6].insertRule('a[aria-expanded="true"] { color: '+useColor+'; }', 6);
+    document.styleSheets[6].insertRule('.table.newrecordings .dropdown-menu.show { border-color: '+useColor+'; }', 6);
   }
   document.styleSheets[6].insertRule('#sidebar { color: '+contastColor+'; }', 6);
   document.styleSheets[6].insertRule('#sidebar ul p { color: '+contastColor+'; }', 6);
@@ -264,10 +266,14 @@ function getColorPref2(){
 }
 
 function updateLinks(){
-  const qString = paramString
+  let qString = "";
+  if(paramString!="?"){
+    qString = paramString;
+  }
   if( document.getElementById('uHome') ) { document.getElementById('uHome').href = "index.html"+qString; }
   if( document.getElementById('uRecordings') ) { document.getElementById('uRecordings').href = "recordings.html"+qString; }
   if( document.getElementById('uEmail') ) { document.getElementById('uEmail').href = "email.html"+qString;}
+  if( document.getElementById('uBranding') ) { document.getElementById('uBranding').href = "branding.html"+qString;}
 }
 
 function buildSidebar(){
@@ -294,20 +300,65 @@ function buildSidebar(){
     }
     if(urlParams.get('logo') && urlParams.get('logo')!=""){
       document.getElementById('logo').src = "https://"+urlParams.get('logo');
+
+      let link = document.querySelector("link[rel~='icon']");
+      if (!link) {
+          link = document.createElement('link');
+          link.rel = 'icon';
+          document.getElementsByTagName('head')[0].appendChild(link);
+      }
+      link.href = "https://"+urlParams.get('logo');
+
     }else{
-      if( document.getElementById('logo') ) { document.getElementById('logo').src = data.results[0][brand]['logo']; }
+      if( document.getElementById('logo') ) { 
+        document.getElementById('logo').src = data.results[0][brand]['logo'];
+
+        let link = document.querySelector("link[rel~='icon']");
+        if (!link) {
+            link = document.createElement('link');
+            link.rel = 'icon';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+        link.href = data.results[0][brand]['logo'];
+      }
     }
     
     if( document.getElementById('footerImg') ) { document.getElementById('footerImg').src = data.results[0][brand]['footer']; }
 
     const productName = document.querySelectorAll(".productName");
     for(let i=0; i<productName.length; i++){
-      productName[i].innerHTML=data.results[0][brand]['productName'];
+      if(urlParams.get('product') && urlParams.get('product')!=""){
+        productName[i].innerHTML=urlParams.get('product');
+      }else{
+        productName[i].innerHTML=data.results[0][brand]['productName'];
+      }   
     }
 
     const companyName = document.querySelectorAll(".companyName");
     for(let i=0; i<companyName.length; i++){
-      companyName[i].innerHTML=data.results[0][brand]['companyName'];
+      if(urlParams.get('company') && urlParams.get('company')!=""){
+        companyName[i].innerHTML=urlParams.get('company');
+      }else{
+        companyName[i].innerHTML=data.results[0][brand]['companyName'];
+      } 
+    }
+
+    const linksTC = document.querySelectorAll(".uTermsConditions");
+    for(let i=0; i<linksTC.length; i++){
+      if(urlParams.get('urlTC') && urlParams.get('urlTC')!=""){
+        linksTC[i].href=urlParams.get('urlTC');
+      }else{
+        linksTC[i].href=data.results[0][brand]['uTermsConditions'];
+      } 
+    }
+
+    const linksP = document.querySelectorAll(".uPrivacyPolicy");
+    for(let i=0; i<linksP.length; i++){
+      if(urlParams.get('urlP') && urlParams.get('urlP')!=""){
+        linksP[i].href=urlParams.get('urlP');
+      }else{
+        linksP[i].href=data.results[0][brand]['uPrivacyPolicy'];
+      } 
     }
   };
 }

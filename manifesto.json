@@ -1,0 +1,13 @@
+{
+  "main.css": "css/styles.css",
+  "main.js": "js/config.js",
+  "assets/card.html": "assets/card.html",
+  "index.html": "index.html",
+  "item.html": "item.html",
+  "release.html": "release.html",
+  "webfonts/fa-solid-900.eot": "webfonts/fa-solid-900.eot",
+  "webfonts/fa-solid-900.svg": "webfonts/fa-solid-900.svg",
+  "webfonts/fa-solid-900.ttf": "webfonts/fa-solid-900.ttf",
+  "webfonts/fa-solid-900.woff": "webfonts/fa-solid-900.woff",
+  "webfonts/fa-solid-900.woff2": "webfonts/fa-solid-900.woff2"
+}

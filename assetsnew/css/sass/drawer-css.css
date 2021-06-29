@@ -338,7 +338,8 @@ h3.page-title {
 
 .table.newrecordings .dropdown-menu.show {
   background-color: #f5f2f7;
-  border: 1px solid #582d82;
+  border-width: 1px;
+  border-style: solid;
   min-width: 140px;
 }
 
@@ -348,7 +349,7 @@ h3.page-title {
 }
 
 .table.newrecordings .dropdown-menu.show a.dropdown-item:first-child {
-  color: #582d82 !important;
+  color: #582d82;
 }
 
 .table.newrecordings .dropdown-menu.show a.dropdown-item:hover {
@@ -411,7 +412,7 @@ h3.page-title {
 }
 
 #shareModal .modal-dialog .modal-content .footer-btn .btn-cancel {
-  border: 1px solid #582d82 !important;
+  border: 1px solid #582d82;
   background-color: #fff;
   margin-right: 10px;
   color: #582d82;

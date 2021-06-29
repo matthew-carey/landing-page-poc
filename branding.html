@@ -119,7 +119,7 @@
             </div>
 
             <ul class="list-unstyled components primaryColorBorder" id="menuSection">
-                <li class="active">
+                <li>
                     <a href="index.html" id="uHome"><i class="far fa-user"></i> Meetings</a>
                 </li>
                 <li class="">
@@ -133,12 +133,12 @@
                     <a href="#" class=""><i class="fas fa-chart-pie"></i> Reports</a>
                 </li>
                 <li class="">
-                    <a href="#settingsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-cog"></i> Settings</a>
-                    <ul class="collapse list-unstyled submenu" id="settingsSubmenu">
-                        <li class="">
-                          <a href="branding.html" id="uBranding">Branding</a>
+                    <a href="#settingsSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle"><i class="fas fa-cog"></i> Settings</a>
+                    <ul class="collapse list-unstyled submenu show" id="settingsSubmenu">
+                        <li class="active">
+                            <a href="branding.html" id="uBranding">Branding</a>
                         </li>
-<!--<li class=""><a href="#">Setting 2</a></li>-->
+<!--<li class=""><a href="#">Setting 2</a></!-->
                     </ul>
                 </li>
                 <li class="menuSeparate">
@@ -181,25 +181,124 @@
                 </div>
             </nav>
             <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7">
-                <!-- Values populated via JSON -->
-                <h2 class="submitSynopsis" id="submitSynopsis"></h2>
-                <h3 class="submitMessage" id="submitMessage"></h3>
-                <p class="whatsNext" id="whatsNext"></p>
-                <div class="recomendations" id="recomendations"></div>
-              </div>
-              <div id="pictureContainer" class="col-xs-12 col-sm-6 col-md-6 col-lg-5"></div>
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <hr />
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <h2>Customize the app!</h2>
+                <h3>Try changing the items below to match your company's preferences.</h3>
+                <br />
+                <form class="formBranding">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h6>Overall Brand</h6>
+                  </div>
+                </div>
+                <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <fieldset class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="brand" id="brand_r" value="r" checked>
+                      <label class="form-check-label" for="brand_r">
+                        Retail
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="brand" id="brand_w" value="w">
+                      <label class="form-check-label" for="brand_w">
+                        Wholesale
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+                </div>
 
-                  <h2>Lorem Ipsum Dolor</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <div class="line"></div>
-                  <h2>Lorem Ipsum Dolor</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <div class="line"></div>
-                  <h3>Lorem Ipsum Dolor</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h6>Colors</h6>
+                  </div>
+                </div>
+                <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <label>Primary Color
+                    <div class="input-group mb-3">
+                      <input style="height:40px;width:100px;max-width:100px;" type="color" placeholder="Hex Color Code" id="colorPrimary" value="#582D82" class="form-control form-control-md mt-2">
+                    </div>
+                  </label>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <label>Secondary Color
+                    <div class="input-group mb-3">
+                      <input style="height:40px;width:100px;max-width:100px;" type="color" placeholder="Hex Color Code" id="colorSecondary" value="#00B5E2" class="form-control form-control-md mt-2">
+                    </div>
+                  </label>
+                </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h6>Logo and FavIcon</h6>
+                  </div>
+                </div>
+                <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <label>Image URL
+                    <div class="input-group mb-3">
+                      <input type="text" placeholder="Logo URL" id="logoURL" value="" class="form-control form-control-md mt-2">
+                    </div>
+                  </label>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h6>Text Strings</h6>
+                  </div>
+                </div>
+                <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <label>Company Name
+                    <div class="input-group mb-3">
+                      <input style="" type="text" placeholder="Company Name" id="companyName" value="" class="form-control form-control-md mt-2">
+                    </div>
+                  </label>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <label>Product Name
+                    <div class="input-group mb-3">
+                      <input style="" type="text" placeholder="Product Name" id="productName" value="" class="form-control form-control-md mt-2">
+                    </div>
+                  </label>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h6>URL Strings</h6>
+                  </div>
+                </div>
+                <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <label>Terms &amp; Conditions URL
+                    <div class="input-group mb-3">
+                      <input style="" type="text" placeholder="Terms &amp; Conditions URL" id="urlTC" value="" class="form-control form-control-md mt-2">
+                    </div>
+                  </label>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <label>Privacy Policy URL
+                    <div class="input-group mb-3">
+                      <input style="" type="text" placeholder="Privacy Policy URL" id="urlP" value="" class="form-control form-control-md mt-2">
+                    </div>
+                  </label>
+                </div>
+                </div>
+<button type="button" class="btn btn-link" id="btnBrand" onclick="brandSite();"><i class="fas fa-paint-brush"></i> Save Customization Preferences</button>
+</form>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div style="border:1px solid #666;border-radius:4px;background-color:#fff;" id="brandingPreview">
+                  <h5>Branding Preview</h5>
+                  <p class="previewPrimaryColor">
+                    <img src="img/placeholder.png" id="previewLogo" alt="Logo Preview" style="max-width:200px;" />
+                  </p>
+                  <p class="previewSecondaryColor">Secondary Color</p>
+                </div>
               </div>
             </div>
         </div>
@@ -227,6 +326,7 @@
                 $('.collapse.in').toggleClass('in');
                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
             });
+
           if(urlParams.get('brand') && urlParams.get('brand')=="w"){
             let useColor = getColorPref();
             let useColor2 = getColorPref2();
@@ -270,6 +370,12 @@
 
         updateLinks();
         buildSidebar();
+        customizeBrandingForm();
+        updateBrandingPreview();
+
+        $('.formBranding input').on('click', function() {
+          updateBrandingPreview();
+        });
     </script>
 </body>
 </html>

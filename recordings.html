@@ -136,23 +136,15 @@
                     <a href="#settingsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-cog"></i> Settings</a>
                     <ul class="collapse list-unstyled submenu" id="settingsSubmenu">
                         <li>
-                            <a href="#">Setting 1</a>
+                          <a href="branding.html" id="uBranding">Branding</a>
                         </li>
-                        <li>
+                        <!--<li>
                             <a href="#">Setting 2</a>
-                        </li>
+                        </li>-->
                     </ul>
                 </li>
                 <li class="menuSeparate">
-                    <a href="#adminSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-user-shield"></i> Admin</a>
-                    <ul class="collapse list-unstyled submenu" id="adminSubmenu">
-                        <li>
-                            <a href="#">Admin Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Admin Page 2</a>
-                        </li>
-                    </ul>
+                  <a href="#" id="uAdmin"><i class="fas fa-user-shield"></i> Admin</a>
                 </li>
             </ul>
 
@@ -160,11 +152,10 @@
               <img src="img/waves.png" id="footerImg" alt="footer" style="position:absolute; left:0; bottom:0;" />
               <div id="footerContainer">
                 <div id="copyrightContainer" style="z-index:1000;">
-                  <a href="https://www.intrado.com/terms-conditions-policy" class="primaryColorText">Terms &amp; Conditions</a>
-                  <a href="https://www.west.com/legal-privacy/" class="primaryColorText">Privacy Policy</a>
+                  <a href="https://www.intrado.com/terms-conditions-policy" class="primaryColorText uTermsConditions">Terms &amp; Conditions</a>
+                  <a href="https://www.west.com/legal-privacy/" class="primaryColorText uPrivacyPolicy">Privacy Policy</a>
 
-                  <p>&copy; 2021 <span class="companyName">Intrado</span>.<br />
-                  All Rights Reserved.
+                  <p>&copy; 2021 <span class="companyName">Intrado</span>. All Rights Reserved.
                   <p>
                 </div>
               </div>
@@ -314,9 +305,9 @@
                                                     <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
                                                 </svg>
                                             </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#drawer1"><i class="fas fa-cog mr-2"></i> Properties</a>
-                                            <a class="dropdown-item " href="#" data-toggle="modal" data-target="#deleteModal"><i class="far fa-trash-alt mr-2"></i> Delete</a>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-xl-left" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item primaryColorText" href="#"  data-toggle="modal" data-target="#drawer1"><i class="fas fa-cog mr-2"></i> Properties</a>
+                                            <a class="dropdown-item primaryColorText" href="#" data-toggle="modal" data-target="#deleteModal"><i class="far fa-trash-alt mr-2"></i> Delete</a>
                                             
                                             </div>
                                         </div>
@@ -356,9 +347,9 @@
                                                         <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
                                                     </svg>
                                                 </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#drawer1"><i class="fas fa-cog mr-2"></i> Properties</a>
-                                                <a class="dropdown-item text-danger" href="#"><i class="far fa-trash-alt mr-2"></i> Delete</a>
+                                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item primaryColorText" href="#"  data-toggle="modal" data-target="#drawer1"><i class="fas fa-cog mr-2"></i> Properties</a>
+                                                <a class="dropdown-item primaryColorText" href="#"><i class="far fa-trash-alt mr-2"></i> Delete</a>
                                                 
                                                 </div>
                                             </div>
@@ -487,27 +478,45 @@
                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
             });
 
-          let useColor = getColorPref();
-          let useColor2 = getColorPref2();
-          colorizeCss(useColor);
-          colorSVG(useColor,useColor2)
-          colorizeCss2(useColor2);
+          if(urlParams.get('brand') && urlParams.get('brand')=="w"){
+            let useColor = getColorPref();
+            let useColor2 = getColorPref2();
+            colorizeCss(useColor);
+            colorSVG(useColor,useColor2)
+            colorizeCss2(useColor2);
+          }else{
+            colorizeCss();
+            colorSVG()
+            colorizeCss2();
+          }
         });
 
         window.onload=function(){
-          let useColor = getColorPref();
-          let useColor2 = getColorPref2();
-          colorizeCss(useColor);
-          colorSVG(useColor,useColor2)
-          colorizeCss2(useColor2);
+          if(urlParams.get('brand') && urlParams.get('brand')=="w"){
+            let useColor = getColorPref();
+            let useColor2 = getColorPref2();
+            colorizeCss(useColor);
+            colorSVG(useColor,useColor2)
+            colorizeCss2(useColor2);
+          }else{
+            colorizeCss();
+            colorSVG()
+            colorizeCss2();
+          }
         }
 
         setTimeout(function(){
-          let useColor = getColorPref();
-          let useColor2 = getColorPref2();
-          colorizeCss(useColor);
-          colorSVG(useColor,useColor2)
-          colorizeCss2(useColor2);
+          if(urlParams.get('brand') && urlParams.get('brand')=="w"){
+            let useColor = getColorPref();
+            let useColor2 = getColorPref2();
+            colorizeCss(useColor);
+            colorSVG(useColor,useColor2)
+            colorizeCss2(useColor2);
+          }else{
+            colorizeCss();
+            colorSVG()
+            colorizeCss2();
+          }
         }, 1000);
 
         updateLinks();

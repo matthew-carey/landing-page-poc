@@ -303,7 +303,10 @@ hr {
 }
 .sidebar-header img{
   display:block; 
-  width:112px; 
+  min-width:100px;
+  max-width: 200px;
+  min-height:50px;
+  max-height:110px;
   margin:6px auto;
 }
 
@@ -368,4 +371,13 @@ button.btn.btn-primary{
 
 .btnClear{
   cursor: pointer;
+}
+
+.formBranding label {width:100%;}
+#brandingPreview{
+  padding:16px;
+}
+
+input:disabled{
+  cursor:not-allowed;
 }

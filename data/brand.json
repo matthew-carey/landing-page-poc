@@ -4,13 +4,17 @@
       "logo": "svg/logo.svg",
       "footer": "img/waves.png",
       "productName": "Hoot Meetings",
-      "companyName": "Intrado"
+      "companyName": "Intrado",
+      "uTermsConditions": "https://www.intrado.com/terms-conditions-policy",
+      "uPrivacyPolicy": "https://www.intrado.com/en/legal-privacy"
     },
     "w": {
       "logo": "img/logo-wholesale.png",
       "footer": "img/angles.png",
       "productName": "Unified Meeting X",
-      "companyName": "The Conferencing Center"
+      "companyName": "The Conferencing Center",
+      "uTermsConditions": "https://www.uccenter.com/terms.php",
+      "uPrivacyPolicy": "https://www.uccenter.com/privacy.php"
     }
   }]
 }

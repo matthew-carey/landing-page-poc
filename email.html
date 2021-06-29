@@ -255,7 +255,7 @@
                                                     <tr>
                                                         <td align="left">
                                                             <p style="padding-bottom: 0px;">
-                                                                <a class="primaryColorText" href="#" style="text-decoration: underline; font-family: Roboto, Arial, sans-serif;font-size: 16px;line-height: 19px; ">
+                                                                <a class="primaryColorText uTermsConditions" href="#" style="text-decoration: underline; font-family: Roboto, Arial, sans-serif;font-size: 16px;line-height: 19px; ">
                                                                 Terms &amp; Conditions
                                                                 </a>
                                                             </p>
@@ -270,7 +270,7 @@
                                                     <tr>
                                                         <td> 
                                                             <p class="primaryColorText" style="padding-bottom: 0px;">
-                                                                <a class="primaryColorText" href="#" style="text-decoration: underline;font-family: Roboto, Arial, sans-serif;font-size: 16px;line-height: 19px;">
+                                                                <a class="primaryColorText uPrivacyPolicy" href="#" style="text-decoration: underline;font-family: Roboto, Arial, sans-serif;font-size: 16px;line-height: 19px;">
                                                                 Privacy Policy
                                                                 </a>
                                                             </p>
@@ -290,7 +290,7 @@
                                                     <tr>
                                                         <td align="left" style="border-collapse:collapse;border-spacing:0;padding:0px 30px 0px 30px;">
                                                             <p style="font-family: Roboto, Arial, sans-serif; font-size: 16px; line-height: 19px; padding: 0px; margin: 0px; color: #656565;"> 
-                                                                © Copyright 2021 <span class="companyName">Intrado</span>. All Rights Reserved.
+                                                                &copy; Copyright 2021 <span class="companyName">Intrado</span>. All Rights Reserved.
                                                             </p>                                                
                                                         </td>
                                                     </tr>
@@ -344,27 +344,45 @@
                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
             });
 
-          let useColor = getColorPref();
-          let useColor2 = getColorPref2();
-          colorizeCss(useColor);
-          colorSVG(useColor,useColor2)
-          colorizeCss2(useColor2);
+          if(urlParams.get('brand') && urlParams.get('brand')=="w"){
+            let useColor = getColorPref();
+            let useColor2 = getColorPref2();
+            colorizeCss(useColor);
+            colorSVG(useColor,useColor2)
+            colorizeCss2(useColor2);
+          }else{
+            colorizeCss();
+            colorSVG()
+            colorizeCss2();
+          }
         });
 
         window.onload=function(){
-          let useColor = getColorPref();
-          let useColor2 = getColorPref2();
-          colorizeCss(useColor);
-          colorSVG(useColor,useColor2)
-          colorizeCss2(useColor2);
+          if(urlParams.get('brand') && urlParams.get('brand')=="w"){
+            let useColor = getColorPref();
+            let useColor2 = getColorPref2();
+            colorizeCss(useColor);
+            colorSVG(useColor,useColor2)
+            colorizeCss2(useColor2);
+          }else{
+            colorizeCss();
+            colorSVG()
+            colorizeCss2();
+          }
         }
 
         setTimeout(function(){
-          let useColor = getColorPref();
-          let useColor2 = getColorPref2();
-          colorizeCss(useColor);
-          colorSVG(useColor,useColor2)
-          colorizeCss2(useColor2);
+          if(urlParams.get('brand') && urlParams.get('brand')=="w"){
+            let useColor = getColorPref();
+            let useColor2 = getColorPref2();
+            colorizeCss(useColor);
+            colorSVG(useColor,useColor2)
+            colorizeCss2(useColor2);
+          }else{
+            colorizeCss();
+            colorSVG()
+            colorizeCss2();
+          }
         }, 1000);
 
         updateLinks();
