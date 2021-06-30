@@ -298,6 +298,11 @@ function buildSidebar(){
     else{
       brand = "r";
     }
+
+    if(brand=="w" && document.getElementById('emailFooterImg')){
+      document.getElementById('emailFooterImg').data="svg/unoptimized/vector_angles.svg";
+    }
+
     if(urlParams.get('logo') && urlParams.get('logo')!=""){
       document.getElementById('logo').src = "https://"+urlParams.get('logo');
 
